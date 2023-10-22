@@ -42,7 +42,7 @@ function mostrarFotos(photos) {
     });
 }
 
-
+obtenerFotos("23512grupo27logo")
 
 //obtenerFotos("23512grupo27esquel") 
 
