@@ -10,7 +10,7 @@ body {
 
 h1 {
     font-size: 20px;
-    font-family:'Kalam', cursive;
+    font-family:'Roboto', cursive;
     margin-top: 0px;
 }
 h2{
@@ -31,15 +31,22 @@ h2{
     display: none;
 }
 .contenido_paginas{
+    display: flex;
+    justify-content: space-evenly;
     margin-bottom: 20px;
 }
 .lista_ciudades{
     margin-top: 50px;
     text-align: center;
+    
+}
+.lista_ciudades select{
+    cursor: pointer;
 }
 .lista_ciudades p{
     font-size: 50px;
     font-weight: bolder;
+    
 }
 .lista_ciudades select{
     font-size: 20px;
@@ -114,6 +121,9 @@ footer p {
 .mainmenu {
     float: right;
     margin-right: 40px;
+}
+.titulo_regiones{
+    font-size: 70px;
 }
 
 .regiones {
@@ -277,7 +287,6 @@ h2 {
     /* Hace aparecer el nombre cuando el mouse pasa por encima */
 }
 
-
 /* Implementacion de mediaqueries-INDEX---------------------------------------------*/
 @media screen and (max-width:800px){
     .titulo_principal{
@@ -315,4 +324,33 @@ h2 {
         display: block;
         grid-area: sur;
     }
-}
+
+    .footer p {
+        font-size: medium;    
+    }
+    footer ul {
+        text-align: center;
+        justify-content: center;
+
+    }
+    footer .icon{
+        height: 18px;
+        width: 25px;
+    }
+    .titulo_regiones{
+        font-size: 30px;
+        
+    }
+    .lista_ciudades p{
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    .contenido_paginas{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        
+        margin-bottom: 20px;
+    }
+
+}   

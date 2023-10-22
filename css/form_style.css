@@ -1,5 +1,6 @@
 body{
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,70,121,0.6895133053221288) 25%, rgba(0,212,255,1) 100%);
+   
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,70,121,0.6895133053221288) 25%, rgba(0,212,255,1) 100%);
 } 
 
 .menuHorizontal {
@@ -94,7 +95,7 @@ div .titulo {
     color: #ffffff;
     font-size: 50px;
     background-color:#0284c7 ;
-        width: 100%;
+    width: 100%;
     justify-content: center;
     grid-area: titulo;
 
@@ -258,14 +259,11 @@ div .titulo h1:hover {
 
 @media screen and (max-width:800px) {
     .formulario {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
 
-    .formulario__grupo-terminos,
-    .formulario__mensaje,
-    .formulario__grupo-btn-enviar {
-        grid-column: 1;
-    }
+    
 }
 
 /*Formato del contenido pie de pagina FOOTER*/
@@ -303,20 +301,4 @@ footer p {
     color: #fff;
     margin-left: 3px;
     align-items: end;
-}
-
-/* Implementacion de mediaqueries----------------------------------------------*/
-@media screen and (max-width:800px) {
-    .contenedor {
-        display: grid;
-        grid-template: auto/ auto;
-        grid-template-areas: "header "
-            "inicio "
-            "titulo "
-            "formulario"
-            "pie  ";
-    }
-
-
-
 }

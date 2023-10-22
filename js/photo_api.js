@@ -42,9 +42,9 @@ function mostrarFotos(photos) {
     });
 }
 
-obtenerFotos("23512grupo27logo")
 
-//obtenerFotos("23512grupo27esquel") 
+
+obtenerFotos("23512grupo27logo") 
 
 //prueba de la llamada
 var select = document.getElementById("miSelectMultiple");
