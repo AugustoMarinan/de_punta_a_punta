@@ -27,7 +27,6 @@
     </div>
 </head>
 
-<!--EMPIEZA MODIFICACION-->
 <div class="menuHorizontal">
     <ul>
         <ul>
@@ -59,14 +58,14 @@
     <form method="" action="/send/" class="form_ciudades">
         <p>Selecciona una Provincia y conocé su historia:</p>
         <select id="miSelectMultiple" onchange="">
-            <option value="23512grupo27catamarca">catamarca </option>
-            <option value="23512grupo27chaco">chaco </option>
+            <option value="23512grupo27catamarca">Catamarca </option>
+            <option value="23512grupo27chaco">Chaco </option>
             <option value="23512grupo27corrientes">Corrientes </option>
             <option value="23512grupo27formosa">Formosa </option>
             <option value="23512grupo27jujuy">Jujuy</option>
             <option value="23512grupo27misiones">Misiones</option>
             <option value="23512grupo27salta">Salta</option>
-            <option value="23512grupo27sgoestero">Sgo del Estero</option>
+            <option value="23512grupo27sgoestero">Sgo. del Estero</option>
             <option value="23512grupo27tucuman">Tucumán</option>
 
         </select>
@@ -325,12 +324,11 @@
     select.addEventListener("change", function () {
         var selectedValue = select.value;
 
-        // Oculta todos los contenedores de texto
         containers.forEach(function (container) {
             container.style.display = 'none';
         });
 
-        // Muestra el contenedor de texto correspondiente a la opción seleccionada
+        
         var containerToShow = document.getElementById("container_" + selectedValue);
         if (containerToShow) {
             containerToShow.style.display = 'block';

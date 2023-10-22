@@ -44,7 +44,7 @@ function mostrarFotos(photos) {
 
 
 
-obtenerFotos("23512grupo27logo") 
+obtenerFotos("23512grupo27logo1") 
 
 //prueba de la llamada
 var select = document.getElementById("miSelectMultiple");

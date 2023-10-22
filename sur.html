@@ -54,7 +54,6 @@
     <h2 class="titulo_regiones">Región Sur</h2>
 </div>
 
-<!-- EMPIEZA API INTEGRATION -->
 <div class="lista_ciudades">
     <form method="" action="/send/" class="form_ciudades">
         <p>Selecciona una Provincia y conocé su historia:</p>
@@ -271,12 +270,11 @@
     select.addEventListener("change", function () {
         var selectedValue = select.value;
 
-        // Oculta todos los contenedores de texto
         containers.forEach(function (container) {
             container.style.display = 'none';
         });
 
-        // Muestra el contenedor de texto correspondiente a la opción seleccionada
+        
         var containerToShow = document.getElementById("container_" + selectedValue);
         if (containerToShow) {
             containerToShow.style.display = 'block';

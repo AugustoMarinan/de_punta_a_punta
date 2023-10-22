@@ -238,9 +238,9 @@ h2 {
     height: 100%;
     object-fit: cover;
     filter: brightness(1);
-    /* Configura el brillo inicial */
+   
     transition: filter 0.3s ease;
-    /* Agrega transición para suavizar el cambio de brillo */
+
 }
 
 .nombre {
@@ -253,9 +253,9 @@ h2 {
     padding: 10px;
     opacity: 0;
     top: 0;
-    /* Inicialmente, el nombre estará oculto */
+    
     transition: opacity 0.3s ease;
-    /* Agrega transición para suavizar la aparición del nombre */
+  
 }
 
 .descripcion {
@@ -267,27 +267,26 @@ h2 {
     align-items: center;
     opacity: 0;
     top: 50%;
-    /* Inicialmente, el nombre estará oculto */
     transition: opacity 0.3s ease;
-    /* Agrega transición para suavizar la aparición del nombre */
+    
 }
 
 .imagen:hover .galeria-img {
     filter: brightness(0.3);
-    /* Reduce el brillo cuando el mouse pasa por encima */
+    
 }
 
 .imagen:hover .nombre {
     opacity: 1;
-    /* Hace aparecer el nombre cuando el mouse pasa por encima */
+   
 }
 
 .imagen:hover .descripcion {
     opacity: 1;
-    /* Hace aparecer el nombre cuando el mouse pasa por encima */
+   
 }
 
-/* Implementacion de mediaqueries-INDEX---------------------------------------------*/
+
 @media screen and (max-width:800px){
     .titulo_principal{
         font-size: large;

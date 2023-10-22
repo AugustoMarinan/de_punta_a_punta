@@ -10,7 +10,7 @@ body{
     margin-top: 30px;
     font-size: 20px;
     color: aliceblue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: roboto; 
 }
 
 .menuHorizontal ul {
@@ -19,8 +19,11 @@ body{
 
 .menuHorizontal li {
     float: right;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+a:visited {
+    color:aliceblue
 }
 
 
@@ -94,7 +97,7 @@ div .titulo {
     display: inline-flex;
     color: #ffffff;
     font-size: 50px;
-    background-color:#0284c7 ;
+    /*background-color:#0284c7 ;*/
     width: 100%;
     justify-content: center;
     grid-area: titulo;
@@ -106,12 +109,8 @@ div .titulo h1:hover {
     box-shadow: 10px 0px 30px rgba(163, 163, 163, 1)
 }
 
-
-/*Estilos del formulario*/
-
-
 .formulario {
-    margin-top: 30px;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     left: 20px;
@@ -122,7 +121,7 @@ div .titulo h1:hover {
 .formulario__label {
     display: block;
     font-weight: 700;
-    padding: 10x;
+    padding: 20x;
     cursor: pointer;
     font-size:20px ;
     color:#f5f6f9;
@@ -181,7 +180,7 @@ div .titulo h1:hover {
 .formulario__grupo-terminos,
 .formulario__mensaje,
 .formulario__grupo-btn-enviar {
-    grid-column: span 2;
+grid-column: span 2;
 }
 
 .formulario__mensaje {
@@ -207,6 +206,7 @@ div .titulo h1:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .formulario__btn {
@@ -253,32 +253,30 @@ div .titulo h1:hover {
 
 .formulario__grupo-incorrecto .formulario__input {
     border: 3px solid #bb2929;
+
 }
-
-/*Mediaqueries*/
-
-@media screen and (max-width:800px) {
-    .formulario {
-        display: flex;
-        flex-direction: column;
-    }
-
-    
-}
-
-/*Formato del contenido pie de pagina FOOTER*/
 
 footer {
-    background-color:#0284c7;
+    background-color: #0284c7;
     display: flex;
     text-align: start;
     align-content: flex-end;
     margin: 0;
     padding: 0;
     height: 100%;
-    grid-area: pie;
+    padding-top: 20px;
+    padding-left: 80px;
+    grid-area: footer;
+    justify-content: space-between;
+    align-items: flex-end;
+}
 
+.formulario__grupo .formulario__grupo-btn-enviar{
+    text-align: center;
+}
 
+.formulario__grupo{
+    margin-top: 20px;
 }
 
 footer li {
@@ -293,12 +291,25 @@ footer li a {
 }
 
 li a #media_icons {
-    height: 25px;
+    height: 45px;
+    margin-top: 20px;
+    
+}
+a:visited {
+    color:aliceblue
 }
 
 footer p {
-    font-size: 12px;
+    font-size: 25px;
     color: #fff;
     margin-left: 3px;
     align-items: end;
+}
+
+@media screen and (max-width:800px) {
+    .formulario {
+        display: flex;
+        flex-direction: column;
+    }
+   
 }
