@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Región Central</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <div id="whatsAppWidget" style="position: fixed; right: 24px; bottom: 48px; float: left; z-index:20;">
+        <a href="https://api.whatsapp.com/send?phone=5491162646950&amp;text=¡Hola!+Estas+en+De+punta+a+punta+Argentina.+Escribinos+para+más+información."
+            target="_blank" rel="noopener noreferrer nofollow">
+
+            <div
+                style="float: right; height: 50px; width: 50px; border-radius: 50%; overflow: hidden; box-shadow: 2px 2px 6px rgba(0,0,0,0.4); text-align: center; line-height: 50px; color: white; background-color: #075985;">
+                <svg style="display: inline; fill: white" viewBox="0 0 32 32" width="41px" height="50px"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
+                        fill-rule="evenodd"></path>
+                </svg>
+            </div>
+        </a>
+    </div>
+</head>
+
+<!--EMPIEZA MODIFICACION-->
+<div class="menuHorizontal">
+    <ul>
+        <ul>
+
+            <a href="#">
+                <li>Contactanos</li>
+            </a>
+            <a href="sur.html">
+                <li>Sur</li>
+            </a>
+            <a href="centro.html">
+                <li>Centro</li>
+            </a>
+            <a href="norte.html">
+                <li>Norte</li>
+            </a>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+        </ul>
+    </ul>
+</div>
+
+<div>
+    <h2 style="font-size: 70px;">Región Central</h2>
+</div>
+
+<!--<div class="galeria">
+    <div class="imagen">
+        <img src="./assets/images/depositphotos_139020872-stock-photo-road-leading-to-majestic-mount.jpg" alt="Imagen 1"
+            class="galeria-img">
+        <div class="nombre">FORMOSA</div>
+        <div class="descripcion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ea, est temporibus, vero quia voluptate accusantium quae natus praesentium quas aspernatur et magni officiis vitae illo accusamus excepturi cum id?
+        </div>
+    </div>
+    <div class="imagen">
+        <img src="./assets/images/depositphotos_139020872-stock-photo-road-leading-to-majestic-mount.jpg" alt="Imagen 1"
+            class="galeria-img">
+        <div class="nombre">Nombre de la Imagen 1</div>
+    </div>
+    <div class="imagen">
+        <img src="./assets/images/depositphotos_139020872-stock-photo-road-leading-to-majestic-mount.jpg" alt="Imagen 1"
+            class="galeria-img">
+        <div class="nombre">Nombre de la Imagen 1</div>
+    </div>
+    
+</div>-->
+
+<!-- EMPIEZA API INTEGRATION -->
+<div class="lista_ciudades">
+    <form method="" action="/send/" class="form_ciudades">
+        <p>Selecciona una Provincia y conocé su historia:</p>
+        <select id="miSelectMultiple" onchange="">
+            <option value="23512grupo27cordoba">Cordoba </option>
+            <option value="23512grupo27erios">Entre Rios </option>
+            <option value="23512grupo27sfe">Santa Fe </option>
+            <option value="23512grupo27mendoza">Mendoza </option>
+            <option value="23512grupo27rioja">La Rioja</option>
+            <option value="23512grupo27sluis">San Luis</option>
+            <option value="23512grupo27caba">Buenos Aires</option>
+            <option value="23512grupo27sjuan">San Juan</option>
+        </select>
+    </form>
+</div>
+<div class="contenido_paginas" style="display: flex;justify-content: space-evenly;">
+    <div id="fotos-container"></div>
+    <div class="informacion_ciudades">
+        <div class="container_texto" id="container_23512grupo27cordoba">
+            <h3>Córdoba, Argentina: Naturaleza, Cultura y Tradición en las Sierras</h3>
+            <p class="texto__info" id="cordoba">
+                La provincia de Córdoba, en el centro de Argentina, es un destino que abarca una amplia gama de
+                experiencias, desde paisajes naturales sorprendentes hasta rica tradición cultural. Conocida como "el
+                corazón de Argentina", Córdoba ofrece una mezcla única de naturaleza, historia y modernidad.
+
+                Las Sierras de Córdoba son un refugio natural que invita a los amantes del senderismo, el ciclismo y la
+                observación de aves. Encontrarás cascadas escondidas, arroyos y miradores panorámicos. El Cerro Uritorco
+                es un destino popular para aquellos interesados en la espiritualidad y la mística.
+
+                La ciudad de Córdoba, la capital provincial, es un centro de cultura e historia. La Manzana Jesuítica es
+                un Patrimonio de la Humanidad y alberga la Universidad Nacional de Córdoba, una de las más antiguas de
+                América. La ciudad también es conocida por su vida nocturna animada y sus peñas folclóricas.
+
+                La gastronomía en Córdoba es variada, con influencias de la inmigración europea. Los platos regionales
+                incluyen la tradicional "asado" y las empanadas cordobesas. Además, Córdoba es famosa por su "choripán,"
+                un sándwich de chorizo argentino.
+
+                Córdoba es un destino que atrae a viajeros de todas las edades y preferencias, ofreciendo una
+                combinación de belleza natural, cultura y tradición en el corazón de Argentina.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27erios">
+            <h3>Entre Ríos, Argentina: Naturaleza y Tradición en la Mesopotamia</h3>
+            <p class="texto__info">
+                La provincia de Entre Ríos, ubicada en el noreste de Argentina, es un destino que combina una
+                abundante naturaleza y una rica tradición cultural. Rodeada de ríos y verdes campos, Entre Ríos
+                ofrece a los visitantes una experiencia que resalta la belleza de la Mesopotamia argentina.
+
+                Los ríos Paraná y Uruguay son elementos centrales en la geografía de Entre Ríos, y brindan
+                oportunidades para disfrutar de actividades acuáticas como la navegación, la pesca y el avistamiento
+                de aves en los humedales.
+
+                La ciudad de Paraná, la capital provincial, se destaca por su arquitectura histórica y sus plazas
+                arboladas. El Palacio San José, la histórica residencia de Urquiza, es un sitio de interés cultural
+                y arquitectónico.
+
+                La tradición gaucha es una parte fundamental de Entre Ríos, con festivales de doma y folklore que
+                celebran la cultura criolla y el espíritu de los gauchos. La música y la danza folclórica son
+                componentes esenciales de la identidad local.
+
+                La gastronomía en Entre Ríos incluye platos de pescado de río, como el surubí, así como las
+                tradicionales comidas criollas como el asado y el locro. La provincia es famosa por su producción de
+                cítricos y su deliciosa mermelada de naranjas amargas.
+
+                Entre Ríos es un destino que atrae a quienes buscan conectarse con la naturaleza y la rica herencia
+                cultural argentina, brindando una experiencia en la tierra fértil de la Mesopotamia.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27sfe">
+            <h3>Santa Fe, Argentina: Naturaleza, Historia y Tradición en el Litoral</h3>
+            <p class="texto__info">
+                La provincia de Santa Fe, ubicada en el centro-este de Argentina, es un destino que combina la belleza
+                natural del litoral con una rica historia y tradiciones culturales. Santa Fe ofrece a los visitantes una
+                experiencia única que abarca desde la naturaleza exuberante hasta la herencia colonial.
+
+                El Delta del Paraná, una vasta región de islas y humedales, es uno de los tesoros naturales de Santa Fe.
+                Aquí, los viajeros pueden explorar en canoa, observar la vida silvestre y disfrutar de la tranquilidad
+                de la naturaleza.
+
+                La ciudad de Santa Fe, la capital provincial, combina una arquitectura histórica con una atmósfera
+                moderna. La Catedral de Santa Fe y el Convento de San Francisco son ejemplos de la rica herencia
+                colonial de la ciudad. La costanera sobre el río Paraná es un lugar ideal para paseos y actividades al
+                aire libre.
+
+                Santa Fe es conocida por su carnaval, que se celebra con desfiles y comparsas de coloridos trajes.
+                Además, la música y la danza folclórica son parte fundamental de la cultura local.
+
+                La gastronomía en Santa Fe destaca por su parrilla y platos regionales, como las empanadas y el locro.
+                Además, la provincia es famosa por sus dulces, como las mermeladas y los alfajores.
+
+                Santa Fe es un destino versátil que atrae a quienes buscan disfrutar de la naturaleza, la historia y la
+                rica tradición cultural del litoral argentino, ofreciendo una experiencia única en el corazón del país.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27mendoza">
+            <h3>Mendoza, Argentina: Tierra del Vino y Aventura en la Montaña</h3>
+            <p class="texto__info">
+                Mendoza, en el oeste de Argentina, es un destino de renombre internacional por su producción de vino de
+                alta calidad, su belleza natural en la cordillera de los Andes y su ambiente relajado. La provincia de
+                Mendoza ofrece una experiencia única que combina cultura vinícola, paisajes montañosos y aventuras al
+                aire libre.
+
+                Los viñedos de Mendoza se extienden por todo el valle, y la región es famosa por su producción de vinos
+                Malbec. Las bodegas ofrecen visitas guiadas y degustaciones, brindando a los visitantes una oportunidad
+                única para explorar el mundo del vino argentino.
+
+                La ciudad de Mendoza, la capital provincial, combina una planificación urbana ordenada con amplias
+                plazas y calles arboladas. El Parque General San Martín es un lugar ideal para relajarse y disfrutar de
+                actividades al aire libre.
+
+                Mendoza es también un punto de partida para actividades en la montaña. El Cerro Aconcagua, la montaña
+                más alta de América del Sur, es un destino para alpinistas y excursionistas. Además, el rafting, el
+                ciclismo de montaña y el trekking son populares en la región.
+
+                La gastronomía en Mendoza es una deliciosa combinación de carnes a la parrilla, platos regionales y
+                comidas gourmet enmarcadas por la influencia del vino local. Las empanadas y las carnes asadas son
+                imperdibles.
+
+                Mendoza es un destino que atrae a amantes del vino, entusiastas de la montaña y viajeros que buscan una
+                experiencia culinaria única en la región cuyana de Argentina.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27rioja">
+            <h3>La Rioja, Argentina: Naturaleza y Cultura en el Noroeste</h3>
+            <p class="texto__info">
+                La provincia de La Rioja, ubicada en el noroeste de Argentina, es un destino que combina la
+                majestuosidad de la naturaleza desértica con una rica herencia cultural. Conocida por su paisaje
+                montañoso, su folclore y su tranquilidad, La Rioja ofrece a los visitantes una experiencia única en el
+                corazón de la región andina.
+
+                El Parque Nacional Talampaya, declarado Patrimonio de la Humanidad, es uno de los principales atractivos
+                de La Rioja. Sus espectaculares cañones y formaciones geológicas únicas lo convierten en un lugar ideal
+                para el senderismo y la observación de la vida silvestre.
+
+                La ciudad capital, La Rioja, es un centro de cultura y tradición en la provincia. La Fiesta Nacional de
+                La Chaya es un evento destacado, donde la música folclórica y el baile son fundamentales. Los huaynos,
+                chacareras y zambas son parte esencial del folclore local.
+
+                La gastronomía en La Rioja combina platos regionales como las empanadas riojanas, el cabrito al horno y
+                el locro, un guiso a base de maíz. Los vinos riojanos también son apreciados y se pueden degustar en las
+                bodegas locales.
+
+                La Rioja es un destino para quienes buscan explorar paisajes desérticos únicos y sumergirse en las
+                tradiciones culturales del noroeste argentino, brindando una experiencia en el corazón de la región
+                andina.
+
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27sluis">
+            <h3>San Luis, Argentina: Naturaleza, Historia y Tranquilidad</h3>
+            <p class="texto__info">
+                San Luis, una provincia en el centro-oeste de Argentina, es un destino que destaca por su belleza
+                natural, rica historia y ambiente tranquilo. Con su paisaje diverso y actividades al aire libre, San
+                Luis ofrece a los visitantes una experiencia única en el corazón del país.
+
+                La Sierra de las Quijadas, un parque nacional en San Luis, es un lugar impresionante para practicar
+                senderismo y disfrutar de vistas panorámicas de cañones, acantilados y formaciones rocosas únicas. Otro
+                destino natural es el Salto del Tabaquillo, una cascada en medio de la selva.
+
+                La ciudad de San Luis, capital provincial, cuenta con calles arboladas y una mezcla de arquitectura
+                histórica y moderna. La Plaza Pringles y el edificio de la Casa de la Música son puntos de interés
+                destacados.
+
+                San Luis es también un destino para actividades al aire libre. El embalse La Florida ofrece
+                oportunidades para la pesca y los deportes acuáticos, mientras que la Reserva Florofaunística de Rincón
+                del Este es un paraíso para observadores de aves.
+
+                La gastronomía en San Luis se basa en productos regionales, como quesos y carnes. Los platos típicos
+                incluyen las "migas," un guiso con pan rallado, y la "cocción de cuero," una especialidad asada.
+
+                San Luis es un destino que atrae a quienes buscan naturaleza, tranquilidad y actividades al aire libre,
+                ofreciendo una experiencia única en el corazón de Argentina.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27caba">
+            <h3>Buenos Aires, Argentina: La Cosmopolita Capital Federal</h3>
+            <p class="texto__info">
+                Buenos Aires, la capital de Argentina, es una ciudad vibrante que combina elegancia europea con un toque
+                latinoamericano. Con su arquitectura imponente, su rica cultura y su bulliciosa vida urbana, Buenos
+                Aires ofrece una experiencia única en América del Sur.
+
+                La Avenida 9 de Julio, una de las más anchas del mundo, se encuentra en el corazón de la ciudad y
+                alberga el icónico Obelisco. El microcentro porteño está repleto de tiendas, teatros y restaurantes de
+                alta gama.
+
+                La zona de La Boca es conocida por su colorida arquitectura y el famoso estadio de fútbol de Boca
+                Juniors, La Bombonera. El barrio de San Telmo, con su arquitectura antigua y mercado de antigüedades, es
+                un imán para los amantes del arte y la cultura.
+
+                Buenos Aires es el lugar de nacimiento del tango, y la música y el baile son fundamentales en la vida
+                nocturna de la ciudad. Los bares y clubes de tango en los barrios de San Telmo y Palermo ofrecen
+                actuaciones emocionantes.
+
+                La gastronomía porteña es una deliciosa mezcla de influencias europeas y carnes a la parrilla. Los
+                asados argentinos son famosos, y la ciudad cuenta con una amplia variedad de restaurantes que ofrecen
+                platos tradicionales y gourmet.
+
+                Buenos Aires es una ciudad que nunca duerme, con una mezcla de arte, cultura, historia y vida nocturna
+                que atrae a viajeros de todo el mundo. Ya sea disfrutando de un espectáculo de tango, explorando sus
+                barrios eclécticos o degustando la carne argentina, esta ciudad tiene algo para todos.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27sjuan">
+            <h3>San Juan, Argentina: Vinicultura, Montañas y Cultura Cuyana</h3>
+            <p class="texto__info">
+                La provincia de San Juan, en el oeste de Argentina, es un destino que combina la tradición vinícola,
+                paisajes montañosos impresionantes y una rica herencia cultural cuyana. Conocida por su producción de
+                vino, la belleza de la cordillera de los Andes y su tradición folclórica, San Juan ofrece a los
+                visitantes una experiencia única en la región de Cuyo.
+
+                San Juan es una parte importante de la región vinícola argentina, con viñedos que producen vinos de alta
+                calidad. Las bodegas de la provincia ofrecen degustaciones de vinos y recorridos por los viñedos, donde
+                los visitantes pueden aprender sobre el proceso de producción.
+
+                La ciudad de San Juan, la capital provincial, combina arquitectura moderna con un fuerte sentido de la
+                tradición cuyana. La Fiesta Nacional del Sol es un evento destacado que celebra la cultura local y
+                ofrece espectáculos musicales y danzas tradicionales.
+
+                La provincia es hogar de paisajes montañosos impresionantes, como el Parque Provincial Ischigualasto,
+                conocido como el "Valle de la Luna", que alberga formaciones geológicas únicas y fósiles antiguos.
+                También es ideal para la práctica de deportes de aventura, como el senderismo y el montañismo.
+
+                La gastronomía en San Juan incluye platos regionales como la chivito, un guiso de cabrito, y la empanada
+                cuyana. Los dulces, como las mermeladas y el dulce de membrillo, son también muy populares.
+
+                San Juan es un destino que atrae a amantes del vino, amantes de la naturaleza y viajeros que buscan
+                experimentar la cultura cuyana y explorar los paisajes de montaña, ofreciendo una experiencia única en
+                la región de Cuyo.
+            </p>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<script>
+    var select = document.getElementById("miSelectMultiple");
+    var containers = document.querySelectorAll(".container_texto");
+
+    document.getElementById("container_23512grupo27cordoba").style.display = "block";
+
+    select.addEventListener("change", function () {
+        var selectedValue = select.value;
+
+        // Oculta todos los contenedores de texto
+        containers.forEach(function (container) {
+            container.style.display = 'none';
+        });
+
+        // Muestra el contenedor de texto correspondiente a la opción seleccionada
+        var containerToShow = document.getElementById("container_" + selectedValue);
+        if (containerToShow) {
+            containerToShow.style.display = 'block';
+        }
+    });
+
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="./js/photo_api.js"></script>
+<script src="./js/api.js"></script>
+
+
+<footer class="footer">
+    <p> © Realizado por grupo 27. Codo a Codo Comisión 23512</p>
+    <div id="socialmedia">
+        <ul class="group">
+            <li>
+                <a href="https://twitter.com/"><img class="icon" id="media_icons" src="./assets/twitter.png"
+                        alt="icon for twitter" /></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/"><img class="icon" id="media_icons" src="./assets/facebook.png"
+                        alt="icon for facebook" /></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/"><img class="icon" id="media_icons" src="./assets/youtube.png"
+                        alt="icon for youtube" /></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+</div>
+
+
+
+
+</header>
+
+</body>
+
+</html>

@@ -1,249 +1,318 @@
-body{
-    background-color: #6096B4;
-    
-    
-    
-}
-h1{
-    font-family: 'Kalam', cursive;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-/*Estilos del Header*/
-
-
-.encabezado{
-    display: flex;
-    height:90%;
-    grid-area: header;
-    
-}
-.encabezado img{
-    width: 100%;
-    height: 100%;
+body {
+    background-color: #7dd3fc;
+  
 }
 
-
-
-
-/*Estilos del Menu*/
-
-.menu{
-    background-color: #93BFCF;
-    text-align: center;    
-    grid-area: inicio;
-    height: 120px;
-   
-   
+h1 {
+    font-size: 20px;
+    font-family:'Kalam', cursive;
+    margin-top: 0px;
 }
-.menu ul{
-    list-style: none;
-    padding: 25px;
-
+h2{
+    font-size: 20px;
+    margin-top: 40px;
 
 }
 
-.menu ul li{
-    display: inline-block;
-    margin:10px   
-   
-
+#fotos-container{
+    width: 500px !important;
 }
-
-.menu li a{
-    color: #063642;    
-    text-decoration: none;
-    font-size: 30px;
-    padding: 10px;
-    background-image: url("../assets/icons/icons8-mate-96.png");    
-    background-size:40px;
-    background-repeat: no-repeat;
-    padding-left: 2em; 
-    font-family: 'Kalam', cursive;
-   
-    
+#fotos-container img{
+    width: 500px;
+    background-size:contain;
 }
-
-
-.menu li a:hover {
-    background-color: #6096B4;
-    font-size: 35px;
-    color: #011318;
-    font-weight: bold;
-    border-radius: 15px;
-    animation: 0.5s infinite menu_opcion;
- }
-
- @keyframes menu_opcion {
-    0%{transform:scaleX(1.0);}
-    50%{transform: scaleX(1.5);}
-    100%{transform: scaleX(1.0);}
-}
-
-
-/*Formato del contenido principal*/
-
-.contenedor{
-    display: grid;
-    grid-template: auto,auto,auto,auto,auto/ auto auto ;
-    grid-template-areas:  "header header"
-                          "inicio inicio"
-                          "titulo titulo"
-                          "contenido fotogaleria"                                                  
-                          "pie pie " ;
-}
-/*Estilos del Titulo*/
-
-div .titulo {
-    display: inline-flex;
-    color: #C08261;
-    background-image: linear-gradient(to bottom, #0a5c71, #063642);
-    border: #063642 2px solid;
-    width: 100%;    
-    justify-content: center;
-    grid-area: titulo;
-    
-}
-div .titulo h1:hover{
-
-    box-shadow: 10px 0px 30px rgba(163, 163 ,163,1 )
-}
-/*Contenido principal----------------------------*/
-article .contenido__articulo{
-    display:flex;
-    grid-area: contenido;
-    width: 40%;
-
-}
-.parrafo__presentacion{
-    display: absolute;
-    margin-left: 12%;
-    width: 100%;
-}
-.contenido__articulo p{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
-    color: #063642;
-}
-
-img.flotante_salinas,
-img.flotante_desert {
-    width: 30%;
-    float: right;
-    margin: 2px 3px;
-}
-img.flotante_cataratas{
-    width: 30%;
-    float: left;
-    margin: 2px 3px;
-}
-.galeria__pais{
-    display: flex;    
-    flex-direction:column;
-    align-items: flex-end;    
-    grid-area: fotogaleria;
-   
-   
-}
-.galeria__pais .imagenes{
-    width: 70%;
-    float: center;
-}
-/*Contenido de las paginas cardinales------*/ 
-
-.contenido_paginas{
-    display: grid;
-    grid-template-columns:auto auto auto;
-    grid-template-areas: "foto lista info"
-}
-#fotos_container{
-    display: flex;
-    grid-area: foto;
-}
-.informacion_ciudades{
-    display: block;
-    grid-area: info;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
-    color: #063642;
-    width: 90%;
-    margin-left: 50px;
-}
-.lista_ciudades form{
-    display: block;
-    grid-area: lista;
-    left: 30px;
-    padding-left: 20px;
-}
-.lista_ciudades form p{
-    font-size: medium;
-    color: #fff;
-}
-p .texto_info{
-    display: flex;
-    justify-content: flex-end;
-}                
-                
-                
 .container_texto{
+    width: 500px;
     display: none;
-    
-    padding: 15px;
 }
-.informacion_ciudades h1{
-    color: #C08261;
-    font-size: large;
-    font-weight:bold;
+.contenido_paginas{
+    margin-bottom: 20px;
+}
+.lista_ciudades{
+    margin-top: 50px;
+    text-align: center;
+}
+.lista_ciudades p{
+    font-size: 50px;
+    font-weight: bolder;
+}
+.lista_ciudades select{
+    font-size: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    /*border-color: snow;*/
+}
+.container_texto h3{
+    color: white;
+    font-size: 40px;
+    margin-bottom: 25px;
+    font-style:italic;
 }
 
+@keyframes menu_opcion {
+    0% {
+        transform: scaleX(1.0);
+    }
 
-/*Formato del contenido pie de pagina FOOTER*/
+    50% {
+        transform: scaleX(1.5);
+    }
+
+    100% {
+        transform: scaleX(1.0);
+    }
+}
 
 footer {
-    background-image: linear-gradient(to bottom, #0a5c71, #063642);
+
+    background-color: #0284c7;
     display: flex;
-    text-align:start;
+    text-align: start;
     align-content: flex-end;
     margin: 0;
     padding: 0;
     height: 100%;
-    grid-area: pie;
-    
-    
+    padding-top: 40px;
+    padding-left: 80px;
+    grid-area: footer;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
-footer li{
+footer li {
     display: inline;
+
+}
+
+footer li a {
+    padding: 5px;
+    justify-content: flex-start;
+
+}
+
+li a #media_icons {
+    height: 45px;
+    margin-top: 20px;
     
 }
-footer li a{
-    padding: 5px;
-    justify-content: flex-start; 
-   
+a:visited {
+    color:aliceblue
 }
 
-li a #media_icons{
-    height: 25px;
-}
-
-footer p{
-    font-size: 12px;
+footer p {
+    font-size: 25px;
     color: #fff;
-    margin-left:3px ;
+    margin-left: 3px;
     align-items: end;
 }
-/* Implementacion de mediaqueries----------------------------------------------*/
-@media screen and (max-width:800px){
-    .contenedor{
-        display: grid;
-        grid-template: auto/ auto ;
-        grid-template-areas: "header "
-                              "inicio "
-                              "titulo "
-                              "contenido "
-                              "fotogaleria "                                                  
-                              "pie  " ;
-    }
+
+.mainmenu {
+    float: right;
+    margin-right: 40px;
+}
+
+.regiones {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+
+.regiones div {
+    max-width: 33%;
+}
+
+.regiones div img {
+    width: 444px;
+    height: 333px;
+    border-radius: 70px 0px 70px 0px;
+    overflow: hidden;
+}
+
+.regiones div p {
+    width: 444px;
+}
+
+#background-video {
+    max-width: 100%;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+h1,
+h2 {
+    color: white;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    text-align: center;
+
+
+}
+
+h1 {
+    font-size: 5rem;
+    margin-top: 30vh;
+    position: absolute;
+    top: 0px;
+    left: 7%;
+}
+
+h2 {
+    font-size: 3rem;
+    padding-top: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menuHorizontal {
+    position: absolute;
+    right: 30px;
+    top: 5px;
+    margin-top: 30px;
+    font-size: 20px;
+    color: aliceblue;
+    font-family: roboto; 
+}
+
+
+
+.menuHorizontal ul {
+    list-style: none;
+}
+
+.menuHorizontal li {
+    float: right;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.linksregiones {
+    text-decoration: none;
+    color: white;
     
+}
+
+.linksregiones:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* REGION NORTE */
+
+.galeria {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 200px;
+}
+
+.imagen {
+    position: relative;
+    margin: 10px;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.galeria-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1);
+    /* Configura el brillo inicial */
+    transition: filter 0.3s ease;
+    /* Agrega transición para suavizar el cambio de brillo */
+}
+
+.nombre {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    opacity: 0;
+    top: 0;
+    /* Inicialmente, el nombre estará oculto */
+    transition: opacity 0.3s ease;
+    /* Agrega transición para suavizar la aparición del nombre */
+}
+
+.descripcion {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    opacity: 0;
+    top: 50%;
+    /* Inicialmente, el nombre estará oculto */
+    transition: opacity 0.3s ease;
+    /* Agrega transición para suavizar la aparición del nombre */
+}
+
+.imagen:hover .galeria-img {
+    filter: brightness(0.3);
+    /* Reduce el brillo cuando el mouse pasa por encima */
+}
+
+.imagen:hover .nombre {
+    opacity: 1;
+    /* Hace aparecer el nombre cuando el mouse pasa por encima */
+}
+
+.imagen:hover .descripcion {
+    opacity: 1;
+    /* Hace aparecer el nombre cuando el mouse pasa por encima */
+}
 
 
+/* Implementacion de mediaqueries-INDEX---------------------------------------------*/
+@media screen and (max-width:800px){
+    .titulo_principal{
+        font-size: large;
+        left: 30%; 
+    }
+    .titulo_secundario{
+        font-size: large;
+        left: 30%; 
+    }
+    .menuHorizontal{
+        display: flex;
+        
+    }
+    .regiones{
+        display: grid;
+        grid-template: auto/auto auto auto;
+        grid-template-areas: "norte"
+                              "centro"
+                              "sur"  ;
+
+    }
+    .regionNorte{
+        display: block;
+        grid-area: norte;
+
+
+    }
+    .regionCentral{
+        display: ruby-base;
+        grid-area: centro;
+
+    }
+    .regionSur{
+        display: block;
+        grid-area: sur;
+    }
 }

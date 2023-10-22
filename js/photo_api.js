@@ -44,7 +44,7 @@ function mostrarFotos(photos) {
 
 
 
-obtenerFotos("mate_argentina") 
+//obtenerFotos("23512grupo27esquel") 
 
 //prueba de la llamada
 var select = document.getElementById("miSelectMultiple");
@@ -61,4 +61,3 @@ select.addEventListener("change", function(){
    
 });
         
-

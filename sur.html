@@ -1,282 +1,344 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seccion Sur</title>
+    <title>Región Sur</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <div id="whatsAppWidget" style="position: fixed; right: 24px; bottom: 48px; float: left; z-index:20;">
+        <a href="https://api.whatsapp.com/send?phone=5491162646950&amp;text=¡Hola!+Estas+en+De+punta+a+punta+Argentina.+Escribinos+para+más+información."
+            target="_blank" rel="noopener noreferrer nofollow">
 
+            <div
+                style="float: right; height: 50px; width: 50px; border-radius: 50%; overflow: hidden; box-shadow: 2px 2px 6px rgba(0,0,0,0.4); text-align: center; line-height: 50px; color: white; background-color: #075985;">
+                <svg style="display: inline; fill: white" viewBox="0 0 32 32" width="41px" height="50px"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
+                        fill-rule="evenodd"></path>
+                </svg>
+            </div>
+        </a>
+    </div>
 </head>
 
-<body>
-    <div class="contenedor">
-        <header class="encabezado">
-            <div class="img-1">
-                <img src="./assets/images/istockphoto-973274388-612x612.jpg" alt="obelisco">
-            </div>
-            <div class="img-2">
-                <img src="./assets/images/depositphotos_139020872-stock-photo-road-leading-to-majestic-mount.jpg"
-                    alt="mountain">
+<!--EMPIEZA MODIFICACION-->
+<div class="menuHorizontal">
+    <ul>
+        <ul>
 
-            </div>
+            <a href="#">
+                <li>Contactanos</li>
+            </a>
+            <a href="sur.html">
+                <li>Sur</li>
+            </a>
+            <a href="centro.html">
+                <li>Centro</li>
+            </a>
+            <a href="norte.html">
+                <li>Norte</li>
+            </a>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+        </ul>
+    </ul>
+</div>
 
-            <div class="img-3">
-                <img src="./assets/images/istockphoto-1202786039-612x612.jpg" alt="">
-            </div>
+<div>
+    <h2 style="font-size: 70px;">Región Sur</h2>
+</div>
 
-            <div class="img-3">
-                <img src="./assets/images/istockphoto-1013342634-612x612.jpg" alt="salta">
-
-            </div>
-            <div class="img-4">
-                <img src="./assets/images/1920_caratras-277690.jpg" alt="cataratas">
-
-            </div>
-
-        </header>
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="norte.html">Norte</a></li>
-                <li><a href="sur.html">Sur</a></li>
-                <li><a href="este.html">Este</a></li>
-                <li><a href="oeste.html">Oeste</a></li>
-                <li><a href="formulario.html">Contactanos</a></li>
-            </ul>
-        </nav>
-        <div class="titulo">
-            <h1>Sección Sur</h1>
-        </div>
-        <div class="contenido_paginas">
-            <div id="fotos-container"></div>
-            <div class="lista_ciudades">
-                <form method="" action="/send/" class="form_ciudades">
-                    <p>Selecciona Ciudad:</p>
-                    <select id="miSelectMultiple" onchange="">
-                        <option value="trevelin">Esquel </option>
-                        <option value="bariloche">Bariloche </option>
-                        <option value="san martin de los andes">San Martin de los Andes </option>
-                        <option value="el bolson">El Bolson </option>
-                        <option value="perito moreno">Calafate</option>
-                        <option value="ushuaia">Ushuaia</option>
-                    </select>
-                </form>
-            </div>
-            <div class="informacion_ciudades">
-                <div class="container_texto " id="container_trevelin">
-                    <p class="texto__info" id="esquel">
-                    <h1>Esquel, encanto en la Cordillera</h1>
-                    Esquel, ubicada en la provincia de Chubut, Argentina, es un tesoro escondido en la cordillera de los
-                    Andes. Rodeada de impresionantes paisajes montañosos y valles verdes, la ciudad ofrece una
-                    experiencia auténtica y tranquila.
-
-                    Durante el invierno, el Cerro La Hoya se convierte en un paraíso para los entusiastas del esquí y
-                    snowboard, mientras que en verano, los amantes de la naturaleza pueden explorar el Parque Nacional
-                    Los Alerces, hogar de antiguos bosques y lagos cristalinos.
-
-                    El centro de Esquel presenta una arquitectura encantadora y acogedora, con calles adoquinadas que
-                    invitan a pasear. La Trochita, un antiguo tren a vapor, ofrece un viaje nostálgico a través de la
-                    región, revelando la rica historia ferroviaria.
-
-                    La gastronomía local, con sus especialidades regionales como cordero y trucha, deleitará a los
-                    paladares más exigentes. Además, el Mercado de la Estación es un lugar vibrante donde los productos
-                    locales y artesanías se exhiben con orgullo.
-
-                    Esquel, con su mezcla de cultura, naturaleza y hospitalidad, se presenta como un destino único que
-                    atrae tanto a quienes buscan aventuras al aire libre como a aquellos que buscan relajación en un
-                    entorno natural incomparable.
-                    </p>
-                </div>
-                <div class="container_texto" id="container_bariloche">
-                    <p class="texto__info">
-                    <h1>San Carlos de Bariloche,un Paraíso en la Patagonia</h1>
-                    Bariloche, en la pintoresca región de la Patagonia argentina, es un destino turístico emblemático
-                    que
-                    combina majestuosos paisajes naturales con encanto alpino. Rodeada por la cordillera de los Andes y
-                    el
-                    lago Nahuel Huapi, la ciudad ofrece una variedad de atracciones durante todo el año.
-
-                    En invierno, el Cerro Catedral se convierte en un paraíso para los amantes del esquí y snowboard,
-                    mientras que en verano, el Circuito Chico permite explorar los lugares más pintorescos, como el
-                    hotel
-                    Llao Llao y el mirador del Cerro Campanario. El Parque Nacional Nahuel Huapi ofrece senderos para
-                    caminatas y oportunidades para la observación de la vida silvestre.
-
-                    El Centro Cívico es el corazón urbano, destacando la arquitectura alpina y ofreciendo vistas al
-                    lago.
-                    Las chocolaterías artesanales son imperdibles, y el Puerto Pañuelo es el punto de partida para
-                    paseos en
-                    barco.
-
-                    Bariloche es conocida por su versatilidad, con actividades que van desde la pesca en sus lagos hasta
-                    la
-                    relajación frente a impresionantes paisajes. Ya sea en busca de emociones en la nieve, exploración
-                    de
-                    senderos naturales o simplemente disfrutar de la belleza escénica, Bariloche cautiva a los
-                    visitantes
-                    con su encanto único.
-                    </p>
-                </div>
-                <div class="container_texto" id="container_san martin de los andes">
-                    <p class="texto__info">
-                    <h1>San Martin de los Andes, belleza en los Andes Patagónicos</h1>
-                    San Martín de los Andes, anidada en la región de la Patagonia argentina, es un destino turístico que
-                    encanta con su belleza natural y su ambiente sereno. Situada a orillas del lago Lácar y rodeada de
-                    la
-                    majestuosa cordillera de los Andes, la ciudad ofrece una experiencia única en cualquier temporada.
-
-                    En invierno, el Cerro Chapelco se convierte en un paraíso para los amantes del esquí, con pistas
-                    rodeadas de bosques nevados. En verano, el lago Lácar invita a actividades acuáticas y paseos
-                    relajantes
-                    en barco, mientras que el Parque Nacional Lanín ofrece senderos para explorar la flora y fauna
-                    autóctonas.
-
-                    El centro de San Martín de los Andes es pintoresco, con su arquitectura alpina y calles empedradas.
-                    La
-                    Ruta de los Siete Lagos, que conecta San Martín de los Andes con Villa La Angostura, es un viaje
-                    escénico imperdible.
-
-                    La gastronomía local combina sabores regionales con influencias de la Patagonia, ofreciendo delicias
-                    como trucha de la región y cordero patagónico. Con su atmósfera relajada y sus paisajes
-                    impresionantes,
-                    San Martín de los Andes cautiva a los visitantes que buscan escapar a un rincón paradisíaco en la
-                    Argentina.
-                    </p>
-                </div>
-                <div class="container_texto" id="container_el bolson">
-                    <p class="texto__info">
-                    <h1>El Bolsón, Argentina: Armonía Natural en la Patagonia</h1>
-                    El Bolsón, ubicado en la provincia de Río Negro, Argentina, es un refugio de belleza natural
-                    enclavado en la región patagónica. Rodeada por los Andes y bañada por el río Quemquemtreu, la ciudad
-                    ofrece una experiencia relajante y auténtica.
-
-                    En invierno, los entusiastas del esquí pueden explorar el Cerro Perito Moreno, con pistas que
-                    serpentean entre bosques de lengas. En verano, El Bolsón se convierte en un paraíso para los amantes
-                    del trekking, con senderos que llevan a cascadas y miradores impresionantes.
-
-                    El Mercado Artesanal es una visita obligada, donde los artesanos locales exhiben sus creaciones
-                    únicas, desde tejidos hasta productos orgánicos. La Feria Regional de Productores es otro punto
-                    destacado, ofreciendo una muestra auténtica de los sabores y productos locales.
-
-                    La atmósfera relajada del centro de El Bolsón, con sus calles empedradas y pintorescas plazas,
-                    invita a explorar a pie. El Bosque Tallado, una galería de esculturas talladas en árboles caídos, es
-                    una expresión artística que fusiona naturaleza y creatividad.
-
-                    El Bolsón se distingue por su estilo de vida sustentable, atrayendo a aquellos que buscan escapar
-                    del bullicio urbano y conectarse con la naturaleza en un entorno de belleza inigualable.
-                    </p>
-                </div>
-                <div class="container_texto" id="container_perito moreno">
-                    <p class="texto__info">
-                    <h1>El Calafate, Argentina: Maravillas Glaciares en la Patagonia</h1>
-                    El Calafate, anclado en la región de la Patagonia argentina, es un enclave fascinante conocido por
-                    su proximidad al Parque Nacional Los Glaciares. Su principal joya, el imponente Glaciar Perito
-                    Moreno, es una maravilla natural que atrae a visitantes de todo el mundo.
-
-                    El Parque Nacional Los Glaciares ofrece la oportunidad de presenciar la majestuosidad del Perito
-                    Moreno y explorar paisajes montañosos, lagos turquesa y extensas lengas. Las pasarelas cercanas al
-                    glaciar brindan vistas espectaculares y la posibilidad de presenciar deslumbrantes desprendimientos
-                    de hielo.
-
-                    El pueblo de El Calafate, a orillas del Lago Argentino, combina encanto patagónico con comodidades
-                    modernas. Sus calles albergan boutiques, restaurantes y chocolaterías que ofrecen delicias
-                    regionales.
-
-                    Además de los glaciares, la región es un paraíso para los amantes de las aves, con una rica
-                    diversidad de especies que encuentran hogar en el entorno. Excursiones en barco por el Lago
-                    Argentino permiten explorar otros glaciares menos conocidos y disfrutar de vistas panorámicas.
-
-                    El Calafate es un destino único que cautiva con su combinación de maravillas naturales y comodidades
-                    acogedoras, brindando a los visitantes una experiencia inolvidable en el corazón de la Patagonia.
-                    </p>
-                </div>
-                <div class="container_texto" id="container_ushuaia">
-                    <p class="texto__info">
-                    <h1>Ushuaia, Argentina: Fin del Mundo y Comienzo de Aventuras Inolvidables</h1>
-                    Ushuaia, la ciudad más austral del mundo, se encuentra en la isla Grande de Tierra del Fuego,
-                    Argentina. Con su ubicación única y escenario espectacular entre montañas y el Canal Beagle, Ushuaia
-                    es una puerta de entrada a la belleza salvaje de la región más austral de América del Sur.
-
-                    El Parque Nacional Tierra del Fuego ofrece senderos escénicos y la oportunidad de embarcarse en
-                    excursiones en barco para explorar las islas del Canal Beagle, hogar de una abundante vida marina y
-                    aves. La Bahía Lapataia, donde convergen los océanos Atlántico y Pacífico, marca el famoso "Fin del
-                    Mundo".
-
-                    El Tren del Fin del Mundo, un histórico ferrocarril, lleva a los visitantes a través de paisajes
-                    impresionantes y recuerda la época de los presos que alguna vez habitaron la región. El Museo del
-                    Presidio también ofrece una mirada a la historia penal de Ushuaia.
-
-                    Las actividades de aventura, como el trekking, el esquí y los paseos en trineo de perros, son
-                    populares en invierno, mientras que en verano, las excursiones en kayak y las caminatas ofrecen
-                    vistas panorámicas de la naturaleza virgen.
-
-                    Ushuaia, con su mezcla de historia fascinante y paisajes asombrosos, es un destino excepcional que
-                    atrae a los viajeros que buscan experiencias únicas en el confín del mundo.
-                    </p>
-                </div>
-
-            </div>
+<!--<div class="galeria">
+    <div class="imagen">
+        <img src="./assets/images/depositphotos_139020872-stock-photo-road-leading-to-majestic-mount.jpg" alt="Imagen 1"
+            class="galeria-img">
+        <div class="nombre">FORMOSA</div>
+        <div class="descripcion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ea, est temporibus, vero quia voluptate accusantium quae natus praesentium quas aspernatur et magni officiis vitae illo accusamus excepturi cum id?
         </div>
     </div>
+    <div class="imagen">
+        <img src="./assets/images/depositphotos_139020872-stock-photo-road-leading-to-majestic-mount.jpg" alt="Imagen 1"
+            class="galeria-img">
+        <div class="nombre">Nombre de la Imagen 1</div>
+    </div>
+    <div class="imagen">
+        <img src="./assets/images/depositphotos_139020872-stock-photo-road-leading-to-majestic-mount.jpg" alt="Imagen 1"
+            class="galeria-img">
+        <div class="nombre">Nombre de la Imagen 1</div>
+    </div>
     
+</div>-->
 
- 
-    <script>
-        var select = document.getElementById("miSelectMultiple");
-        var containers = document.querySelectorAll(".container_texto");
+<!-- EMPIEZA API INTEGRATION -->
+<div class="lista_ciudades">
+    <form method="" action="/send/" class="form_ciudades">
+        <p>Selecciona una Provincia y conocé su historia:</p>
+        <select id="miSelectMultiple" onchange="">
+            <option value="23512grupo27rionegro">Rio Negro </option>
+            <option value="23512grupo27neuquen">Neuquen </option>
+            <option value="23512grupo27chubut">Chubut </option>
+            <option value="23512grupo27lapampa">La Pampa</option>
+            <option value="23512grupo27stacruz">Santa Cruz</option>
+            <option value="23512grupo27tfuego">Tierra del Fuego</option>
+            <option value="23512grupo27antartida">Antartida </option>
+        </select>
+    </form>
+</div>
+<div class="contenido_paginas" style="display: flex;justify-content: space-evenly;">
+    <div id="fotos-container"></div>
+    <div class="informacion_ciudades">
+        <div class="container_texto" id="container_23512grupo27rionegro">
+            <h3>Río Negro, Argentina: Naturaleza, Patagonia y Sabores Regionales</h3>
+            <p class="texto__info" id="salta">
+                La provincia de Río Negro, ubicada en la región patagónica de Argentina, es un destino que combina la
+                majestuosidad de la naturaleza, la belleza de la Patagonia y una rica tradición culinaria regional. Río
+                Negro ofrece a los visitantes una experiencia única en el sur del país.
 
-        document.getElementById("container_trevelin").style.display = "block";
+                La provincia es conocida por sus parajes naturales impresionantes, como el Parque Nacional Nahuel Huapi
+                y la zona de los lagos. Aquí, los amantes de la naturaleza pueden disfrutar de actividades al aire
+                libre, como el senderismo, la pesca y el avistamiento de aves en paisajes montañosos y lagos
+                cristalinos.
 
-        select.addEventListener("change", function () {
-            var selectedValue = select.value;
-            
-            // Oculta todos los contenedores de texto
-            containers.forEach(function (container) {
-                container.style.display = 'none';
-            });
-            
-            // Muestra el contenedor de texto correspondiente a la opción seleccionada
-            var containerToShow = document.getElementById("container_" + selectedValue);
-            if (containerToShow) {
-                containerToShow.style.display = 'block';
-            }
-        }); 
-    
-            
-    </script>
+                Las ciudades de San Carlos de Bariloche y San Antonio Oeste son destinos turísticos populares. Bariloche
+                es famosa por su arquitectura alpina, su chocolatería y su esquí en invierno. San Antonio Oeste, en la
+                costa atlántica, ofrece playas y oportunidades para el avistamiento de ballenas.
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="./js/photo_api.js"></script>
+                La gastronomía en Río Negro incluye platos regionales como el cordero patagónico, el ciervo y el
+                chocolate artesanal. La provincia es famosa por su producción de peras y manzanas, y los vinos de la
+                región son apreciados por su calidad.
 
-    <footer class="pie">
-        <div id="socialmedia">
-            <ul class="group">
-                <li>
-                    <a href=""><img class="icon" id="media_icons" src="./assets/twitter.png"
-                            alt="icon for twitter" /></a>
-                </li>
-                <li>
-                    <a href=""><img class="icon" id="media_icons" src="./assets/facebook.png"
-                            alt="icon for facebook" /></a>
-                </li>
-                <li>
-                    <a href=""><img class="icon" id="media_icons" src="./assets/youtube.png"
-                            alt="icon for youtube" /></a>
-                </li>
-            </ul>
-            <p>(c) Realizado por grupo 27. Codo a Codo Comision 23512</p>
+                Río Negro es un destino versátil que atrae a quienes buscan experiencias en la naturaleza y disfrutar de
+                los sabores auténticos de la región patagónica, brindando una experiencia única en el sur de Argentina.
+            </p>
         </div>
-    </footer>
+        <div class="container_texto" id="container_23512grupo27neuquen">
+            <h3>Neuquén, Argentina: Naturaleza Virgen y Aventuras al Aire Libre</h3>
+            <p class="texto__info">
+                La provincia de Neuquén, ubicada en la región patagónica de Argentina, es un destino que se caracteriza
+                por sus espectaculares paisajes naturales, la cordillera de los Andes y una amplia gama de actividades
+                al aire libre. Neuquén ofrece a los visitantes una experiencia única en la Patagonia argentina.
+
+                El Parque Nacional Lanín es uno de los principales atractivos naturales de la provincia, con lagos, ríos
+                y bosques de montaña. Los visitantes pueden disfrutar de senderismo, pesca, navegación y avistamiento de
+                aves en este entorno natural virgen.
+
+                La ciudad de Neuquén, la capital provincial, es un centro urbano moderno que combina servicios de
+                calidad con una oferta cultural diversa. El Monumento a San Martín y el Museo Provincial de Bellas Artes
+                son lugares de interés destacados.
+
+                La provincia es conocida por su producción de petróleo y gas, así como por su emergente industria
+                vitivinícola. Las bodegas en Neuquén ofrecen degustaciones de vinos, incluyendo el reconocido Malbec
+                argentino.
+
+                La gastronomía en Neuquén incluye platos regionales como el cordero patagónico, el jabalí y las truchas
+                de los ríos de montaña. La provincia es también famosa por sus frutas finas y la pera Williams.
+
+                Neuquén es un destino que atrae a amantes de la naturaleza y aventureros que buscan disfrutar de los
+                deportes al aire libre y explorar la belleza de la región patagónica, ofreciendo una experiencia única
+                en el sur de Argentina.
+
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27chubut">
+            <h3>Chubut, Argentina: Naturaleza en Estado Puro y Patrimonio Cultural</h3>
+            <p class="texto__info">
+                La provincia de Chubut, en la región patagónica de Argentina, es un destino que ofrece la oportunidad de
+                experimentar la belleza natural de la Patagonia, junto con un rico patrimonio cultural y tradiciones
+                galesas únicas. Chubut brinda a los visitantes una experiencia única en el extremo sur del país.
+
+                La provincia cuenta con paisajes impresionantes, como la Península Valdés, declarada Patrimonio de la
+                Humanidad por la UNESCO. Esta área es famosa por su vida marina, incluyendo ballenas, pingüinos y lobos
+                marinos, que pueden ser observados en safaris de avistamiento de fauna.
+
+                La ciudad de Trelew es conocida por su influencia galesa, y el Museo Regional Pueblo de Luis es un
+                testimonio de esta herencia. La ciudad también es famosa por su evento anual "Eisteddfod," que celebra
+                la cultura y la música galesa.
+
+                La gastronomía en Chubut incluye platos regionales como el cordero patagónico, el pescado y mariscos
+                frescos, y la tradicional "torta negra galesa." Además, la provincia es conocida por su producción de
+                lana de oveja.
+
+                Chubut es un destino que atrae a quienes buscan explorar la naturaleza virgen de la Patagonia y aprender
+                sobre las influencias culturales únicas de la región, brindando una experiencia única en el extremo sur
+                de Argentina.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27lapampa  ">
+            <h3>La Pampa, Argentina: Paisajes Abiertos y Tradición Gaucha</h3>
+            <p class="texto__info">
+                La provincia de La Pampa, en el centro de Argentina, es un destino que destaca por sus amplios paisajes,
+                su rica tradición gaucha y la vida al aire libre. Conocida por su espíritu rural y su herencia criolla,
+                La Pampa ofrece a los visitantes una experiencia auténtica en el corazón de la pampa argentina.
+
+                Los vastos campos y llanuras de La Pampa son ideales para la práctica de la equitación y la vida al aire
+                libre. La provincia es conocida por sus estancias, donde los visitantes pueden disfrutar de paseos a
+                caballo, asados a la parrilla y actividades camperas.
+
+                La ciudad de Santa Rosa, la capital provincial, es un centro cultural con una arquitectura
+                característica de la región. El Museo Provincial de Artes es un lugar de interés para conocer la cultura
+                pampeana.
+
+                La Fiesta Nacional de la Ganadería es un evento destacado en La Pampa, donde se celebran rodeos,
+                jineteadas y destrezas criollas. La música folclórica y el tango también son parte esencial de la
+                tradición pampeana.
+
+                La gastronomía en La Pampa se basa en carnes a la parrilla, asados y platos criollos como el locro y las
+                empanadas. Además, la provincia es conocida por su producción de vinos y aceite de oliva.
+
+                La Pampa es un destino que atrae a quienes buscan experimentar la auténtica vida gaucha, disfrutar de la
+                naturaleza abierta y explorar la rica tradición criolla en el corazón de la pampa argentina.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27stacruz">
+            <h3>Santa Cruz, Argentina: Naturaleza Prístina y Aventura en la Patagonia</h3>
+            <p class="texto__info">
+                La provincia de Santa Cruz, ubicada en el extremo sur de Argentina, es un destino que se destaca por sus
+                impresionantes paisajes naturales, glaciares, y su ubicación en la región patagónica. Santa Cruz ofrece
+                a los visitantes una experiencia única en uno de los rincones más remotos del país.
+
+                El Parque Nacional Los Glaciares es uno de los principales atractivos de la provincia, hogar del famoso
+                glaciar Perito Moreno. Este impresionante glaciar es uno de los pocos en el mundo que aún se encuentra
+                en crecimiento y es un espectáculo natural que atrae a visitantes de todo el mundo.
+
+                La ciudad de Río Gallegos, la capital provincial, combina una herencia colonial con una atmósfera
+                moderna. La Plaza San Martín es un lugar de encuentro y el Museo de Río Gallegos es un punto de interés
+                cultural.
+
+                Santa Cruz es una provincia que ofrece oportunidades únicas para la pesca, la navegación y el
+                avistamiento de aves en sus ríos y lagos. También es un destino para aventureros que buscan explorar el
+                paisaje patagónico y el Parque Nacional Monte León, un refugio de vida silvestre en la costa atlántica.
+
+                La gastronomía en Santa Cruz destaca por su énfasis en la carne asada, el cordero patagónico y los
+                productos del mar. Además, la provincia es famosa por su producción de cerveza artesanal.
+
+                Santa Cruz es un destino que atrae a amantes de la naturaleza, entusiastas de la aventura y viajeros que
+                buscan experimentar la majestuosidad de la Patagonia en el sur de Argentina.
+
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27tfuego">
+            <h3>Tierra del Fuego, Argentina: Naturaleza Virgen y Exploración en el Fin del Mundo</h3>
+            <p class="texto__info">
+                La provincia de Tierra del Fuego, en el extremo sur de Argentina, es un destino que se caracteriza por
+                sus paisajes salvajes, su aislamiento geográfico y su atmósfera única en el "Fin del Mundo". Conocida
+                por su belleza natural, historia marítima y actividades al aire libre, Tierra del Fuego ofrece a los
+                visitantes una experiencia inolvidable en la región austral.
+
+                La ciudad de Ushuaia, la capital provincial, es la ciudad más austral del mundo y un punto de partida
+                común para explorar la región. El Museo Marítimo y del Presidio de Ushuaia, ubicado en una antigua
+                prisión, ofrece una visión fascinante de la historia de la zona.
+
+                El Parque Nacional Tierra del Fuego es uno de los atractivos naturales más destacados, con bosques,
+                montañas y costas que ofrecen una variedad de actividades al aire libre, como senderismo, kayak y
+                avistamiento de aves.
+
+                Tierra del Fuego es un destino popular para la navegación en el Canal de Beagle y la observación de
+                fauna marina, incluyendo pingüinos y lobos marinos. Además, los cruceros a la Antártida suelen partir
+                desde Ushuaia.
+
+                La gastronomía en Tierra del Fuego se centra en pescados y mariscos frescos, como el centolla, y la
+                cordero patagónico asado. La influencia de la cocina fueguina es única, con platos que aprovechan los
+                recursos locales.
+
+                Tierra del Fuego es un destino que atrae a viajeros aventureros y amantes de la naturaleza que buscan
+                explorar la belleza de la región austral y vivir la experiencia única de estar en el "Fin del Mundo".
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27antartida">
+            <h3>Antártida e Islas del Atlántico Sur: Exploración en el Confín del Mundo</h3>
+            <p class="texto__info">
+                La Antártida e Islas del Atlántico Sur es una región remota y desafiante, conocida por su asombrosa
+                belleza natural, vida silvestre única y la oportunidad de explorar algunos de los lugares más aislados
+                del planeta. Este territorio austral argentino ofrece a los visitantes una experiencia de aventura sin
+                igual en el confín del mundo.
+
+                La Antártida, con su vasto paisaje de hielo y glaciares, es uno de los polos de frío de la Tierra. Los
+                visitantes pueden realizar expediciones científicas, explorar la vida marina en el Mar de Weddell y
+                visitar las bases de investigación que operan en la región.
+
+                Las Islas Malvinas, ubicadas en el Atlántico Sur, son conocidas por su historia y vida silvestre. Los
+                pingüinos, albatros y lobos marinos son comunes en estas islas. La capital, Puerto Argentino (Stanley),
+                es un lugar donde se puede aprender sobre la historia y la herencia de la región.
+
+                Las Islas Georgias del Sur, otro territorio austral argentino, también son ricas en vida silvestre y
+                paisajes impresionantes. La isla es hogar de una gran población de pingüinos rey y elefantes marinos.
+
+                La gastronomía en esta región se basa en los productos del mar, como el pescado y el cangrejo, así como
+                la carne de cordero y el té, que son parte integral de la cultura de las islas.
+
+                La Antártida e Islas del Atlántico Sur es un destino excepcional para aquellos dispuestos a aventurarse
+                en un entorno extremo y experimentar la vida silvestre única de esta región remota. La exploración en
+                esta área proporciona una experiencia inolvidable en el confín del mundo.
+            </p>
+        </div>
 
     </div>
+</div>
+</div>
+
+<script>
+    var select = document.getElementById("miSelectMultiple");
+    var containers = document.querySelectorAll(".container_texto");
+
+    document.getElementById("container_23512grupo27rionegro").style.display = "block";
+
+
+    select.addEventListener("change", function () {
+        var selectedValue = select.value;
+
+        // Oculta todos los contenedores de texto
+        containers.forEach(function (container) {
+            container.style.display = 'none';
+        });
+
+        // Muestra el contenedor de texto correspondiente a la opción seleccionada
+        var containerToShow = document.getElementById("container_" + selectedValue);
+        if (containerToShow) {
+            containerToShow.style.display = 'block';
+        }
+    });
+
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="./js/photo_api.js"></script>
+<script src="./js/api.js"></script>
+
+
+<footer class="footer">
+    <p> © Realizado por grupo 27. Codo a Codo Comisión 23512</p>
+    <div id="socialmedia">
+        <ul class="group">
+            <li>
+                <a href="https://twitter.com/"><img class="icon" id="media_icons" src="./assets/twitter.png"
+                        alt="icon for twitter" /></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/"><img class="icon" id="media_icons" src="./assets/facebook.png"
+                        alt="icon for facebook" /></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/"><img class="icon" id="media_icons" src="./assets/youtube.png"
+                        alt="icon for youtube" /></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+</div>
 
 
 
-    </header>
+
+</header>
 
 </body>
 

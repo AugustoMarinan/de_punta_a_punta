@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
@@ -9,279 +9,400 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <div id="whatsAppWidget" style="position: fixed; right: 24px; bottom: 48px; float: left; z-index:20;">
+        <a href="https://api.whatsapp.com/send?phone=5491162646950&amp;text=¡Hola!+Estas+en+De+punta+a+punta+Argentina.+Escribinos+para+más+información."
+            target="_blank" rel="noopener noreferrer nofollow">
 
+            <div
+                style="float: right; height: 50px; width: 50px; border-radius: 50%; overflow: hidden; box-shadow: 2px 2px 6px rgba(0,0,0,0.4); text-align: center; line-height: 50px; color: white; background-color: #075985;">
+                <svg style="display: inline; fill: white" viewBox="0 0 32 32" width="41px" height="50px"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
+                        fill-rule="evenodd"></path>
+                </svg>
+            </div>
+        </a>
+    </div>
 </head>
 
-<body>
-    <div class="contenedor">
-        <header class="encabezado">
-            <div class="img-1">
-                <img src="./assets/images/istockphoto-973274388-612x612.jpg" alt="obelisco">
-            </div>
-            <div class="img-2">
-                <img src="./assets/images/depositphotos_139020872-stock-photo-road-leading-to-majestic-mount.jpg"
-                    alt="mountain">
+<!--EMPIEZA MODIFICACION-->
+<div class="menuHorizontal">
+    <ul>
+        <ul>
 
-            </div>
+            <a href="#">
+                <li>Contactanos</li>
+            </a>
+            <a href="sur.html">
+                <li>Sur</li>
+            </a>
+            <a href="centro.html">
+                <li>Centro</li>
+            </a>
+            <a href="norte.html">
+                <li>Norte</li>
+            </a>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+        </ul>
+    </ul>
+</div>
 
-            <div class="img-3">
-                <img src="./assets/images/istockphoto-1202786039-612x612.jpg" alt="">
-            </div>
+<div>
+    <h2 style="font-size: 70px;">Región Norte y Nordeste Argentina</h2>
+</div>
 
-            <div class="img-3">
-                <img src="./assets/images/istockphoto-1013342634-612x612.jpg" alt="salta">
-
-            </div>
-            <div class="img-4">
-                <img src="./assets/images/1920_caratras-277690.jpg" alt="cataratas">
-
-            </div>
-
-        </header>
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="norte.html">Norte</a></li>
-                <li><a href="sur.html">Sur</a></li>
-                <li><a href="este.html">Este</a></li>
-                <li><a href="oeste.html">Oeste</a></li>
-                <li><a href="formulario.html">Contactanos</a></li>
-            </ul>
-        </nav>
-        <div class="titulo">
-            <h1>Sección Norte</h1>
-        </div>
-        <div class="contenido_paginas">
-            <div id="fotos-container"></div>
-            <div class="lista_ciudades">
-                <form method="" action="/send/" class="form_ciudades">
-                    <p>Selecciona Ciudad:</p>
-                    <select id="miSelectMultiple" onchange="">
-                        <option value="salta capital">Salta </option>
-                        <option value="cerro siete colores">Jujuy </option>
-                        <option value="tucuman_city">Tucumán </option>
-                        <option value="salinas_jujuy">Salinas Grandes </option>
-                        <option value="pumamarca01">Pumamarca</option>
-                        <option value="cafayate">Cafayate</option>
-                    </select>
-                </form>
-            </div>
-            <div class="informacion_ciudades">
-                <div class="container_texto " id="container_salta capital">
-                    <p class="texto__info" id="salta">
-                    <h1>Salta, Argentina: Donde la Tradición y la Naturaleza se Abrazan</h1>
-                    La provincia de Salta, ubicada en el noroeste de Argentina, es un destino turístico que combina la
-                    belleza natural con una rica herencia cultural. Conocida como "La Linda" por su encanto, Salta
-                    ofrece una experiencia única en cada rincón.
-
-                    El paisaje montañoso de la provincia presenta una gran diversidad, desde las altas cumbres de los
-                    Andes hasta las áridas llanuras de la Puna. En el corazón de la región, las montañas de los Valles
-                    Calchaquíes albergan viñedos y pintorescos pueblos que muestran la influencia colonial española en
-                    su arquitectura y gastronomía.
-
-                    La ciudad de Salta, capital de la provincia, es un tesoro histórico con calles empedradas, edificios
-                    coloniales y una vibrante vida cultural. El Tren a las Nubes, una de las rutas ferroviarias más
-                    altas del mundo, permite explorar la región montañosa de una manera única.
-
-                    La gastronomía salteña es una deliciosa fusión de sabores andinos y europeos, destacándose platos
-                    como la empanada y el locro. Además, la música folclórica y las celebraciones tradicionales, como el
-                    Carnaval de Tilcara, ofrecen un vistazo a la rica cultura local.
-
-                    Salta es un destino versátil que cautiva a los amantes de la naturaleza, la historia y la cultura,
-                    brindando una experiencia enriquecedora y auténtica en el norte argentino.
-                    </p>
-                </div>
-                <div class="container_texto" id="container_cerro siete colores">
-                    <p class="texto__info">
-                    <h1>Jujuy, Argentina: Paisajes de Ensueño y Cultura Andina</h1>
-                    La provincia de Jujuy, en el noroeste de Argentina, es un destino turístico que deslumbra con su
-                    asombrosa belleza natural y su rica herencia cultural. Conocida como la "Tacita de Plata" por su
-                    encanto colonial, Jujuy ofrece una experiencia única en el corazón de los Andes.
-
-                    Los paisajes de Jujuy son variados y espectaculares. Desde las altas cumbres de la Quebrada de
-                    Humahuaca, un sitio declarado Patrimonio de la Humanidad, hasta los verdes valles y las selvas de
-                    las Yungas, la provincia es un paraíso para los amantes de la naturaleza. Además, las Salinas
-                    Grandes, un vasto desierto de sal, asombran con su blancura resplandeciente.
-
-                    La Quebrada de Humahuaca es un centro de la cultura andina, donde antiguas tradiciones se mezclan
-                    con la vida moderna. Pueblos como Purmamarca y Tilcara ofrecen mercados artesanales y festivales
-                    folclóricos que celebran la música y las danzas tradicionales.
-
-                    La gastronomía jujeña combina ingredientes regionales como el maíz y el ají con influencias
-                    prehispánicas. No te pierdas los tamales y las humitas, así como la infaltable empanada.
-
-                    Jujuy es un destino que enamora a quienes buscan una experiencia auténtica, ya sea explorando
-                    paisajes de ensueño o sumergiéndose en la rica herencia andina de la región.
-                    </p>
-                </div>
-                <div class="container_texto" id="container_tucuman_city">
-                    <p class="texto__info">
-                    <h1>Tucumán, Argentina: Historia y Sabor en el Jardín de la República</h1>
-                    La provincia de Tucumán, en el noroeste de Argentina, es un destino que combina una rica historia
-                    con una deliciosa gastronomía. Conocida como el "Jardín de la República", Tucumán ofrece una
-                    experiencia única que resalta la identidad cultural del país.
-
-                    La ciudad de San Miguel de Tucumán, la capital provincial, es un punto de partida ideal para
-                    explorar la región. El centro histórico alberga edificios coloniales y plazas encantadoras, con el
-                    histórico Casa Histórica como un símbolo importante. Aquí, en 1816, se firmó la Declaración de la
-                    Independencia de Argentina.
-
-                    La provincia se caracteriza por sus plantaciones de caña de azúcar, lo que ha llevado a la
-                    producción de uno de los endulzantes más emblemáticos del país, la "miel de caña". La gastronomía
-                    tucumana es deliciosa y auténtica, con platos como la humita en chala y las empanadas salteñas, que
-                    se disfrutan en todo el país.
-
-                    Tucumán también es conocida por su belleza natural, con paisajes montañosos, cascadas y selvas
-                    tropicales en la región de Tafí del Valle. El cerro San Javier ofrece panorámicas impresionantes de
-                    la provincia.
-
-                    Tucumán es un destino que combina la historia patriótica de Argentina con su herencia gastronómica,
-                    ofreciendo a los visitantes una experiencia única en el norte del país.
-                    </p>
-                </div>
-                <div class="container_texto" id="container_salinas_jujuy">
-                    <p class="texto__info">
-                    <h1>Las Salinas Grandes, Argentina: Un Mar de Sal en las Alturas</h1>
-                    Las Salinas Grandes son un fenómeno natural impresionante ubicado en la región noroeste de
-                    Argentina, en las provincias de Salta y Jujuy. Este vasto desierto de sal se extiende a lo largo de
-                    más de 200 kilómetros cuadrados, creando un paisaje lunar de blancura resplandeciente en plena
-                    cordillera de los Andes.
-
-                    Situadas a una altitud de más de 3,000 metros sobre el nivel del mar, Las Salinas Grandes se
-                    encuentran en una región remota, lo que añade un aire de misterio a su belleza surrealista. La capa
-                    de sal se forma por la evaporación del agua de un antiguo lago, dejando cristales de sal que se
-                    extienden hasta donde alcanza la vista.
-
-                    Explorar Las Salinas Grandes es una experiencia única. Las extensiones de sal blanca brillante se
-                    mezclan con la paleta de colores del cielo y las montañas circundantes, creando oportunidades para
-                    fotografías impresionantes. Las visitas guiadas permiten a los visitantes aprender sobre la geología
-                    y la historia del lugar.
-
-                    Además de su belleza natural, Las Salinas Grandes son una fuente de recursos minerales y económicos
-                    para la región, ya que la sal extraída se utiliza en diversas industrias. Sin embargo, su principal
-                    atractivo es su singularidad y su capacidad para dejar una impresión duradera en los visitantes que
-                    buscan maravillarse con la grandiosidad de la naturaleza en estado puro.
-                    </p>
-                </div>
-                <div class="container_texto" id="container_pumamarca01">
-                    <p class="texto__info">
-                    <h1>Purmamarca, Argentina: Colores y Cultura en la Quebrada de Humahuaca</h1>
-                    Purmamarca es un pintoresco pueblo ubicado en la provincia de Jujuy, en el noroeste de Argentina,
-                    enclavado en la impresionante Quebrada de Humahuaca, declarada Patrimonio de la Humanidad. Este
-                    encantador rincón ofrece a los visitantes una experiencia única que combina paisajes deslumbrantes
-                    con una rica herencia cultural.
-
-                    El Cerro de los Siete Colores, un ícono de la región, es el telón de fondo de Purmamarca. Esta
-                    montaña, con sus estratos multicolores, crea un paisaje deslumbrante que cambia de tono con la luz
-                    del día.
-
-                    El pueblo en sí es pintoresco y tranquilo, con calles empedradas y casas de adobe. Su iglesia, la
-                    Iglesia Santa Rosa de Lima, es un edificio histórico que data del siglo XVIII y agrega un toque de
-                    encanto colonial.
-
-                    Purmamarca es un importante centro de la cultura andina, con artesanías locales, mercado de pulgas y
-                    festivales folclóricos que celebran la música y la danza tradicionales. El Carnaval de Purmamarca es
-                    una celebración destacada que atrae a visitantes de todo el país.
-
-                    La gastronomía local combina ingredientes autóctonos con influencias prehispánicas, y los platos
-                    como la humita en chala y las empanadas son irresistibles. Además, la región es famosa por su
-                    producción de quinua y papas.
-
-                    Purmamarca es un destino que atrae a quienes buscan una experiencia auténtica, donde los colores de
-                    la naturaleza se mezclan con la rica cultura andina, creando un ambiente inolvidable en la Quebrada
-                    de Humahuaca.
-                    </p>
-                </div>
-                <div class="container_texto" id="container_cafayate">
-                    <p class="texto__info">
-                    <h1>Cafayate, Argentina: Viñedos y Belleza Natural en el Noroeste</h1>
-                    Cafayate, un encantador pueblo situado en la provincia de Salta, Argentina, es un destino turístico
-                    que combina viñedos de renombre con paisajes naturales espectaculares. Rodeado de montañas y
-                    cañones, Cafayate ofrece una experiencia única en el noroeste argentino.
-
-                    La región es famosa por su producción de vinos de alta calidad, en particular el Torrontés, una cepa
-                    de uva blanca que florece en los viñedos de los alrededores. Las bodegas locales ofrecen
-                    degustaciones y recorridos, brindando a los visitantes la oportunidad de explorar la tradición
-                    vinícola de la zona.
-
-                    El centro de Cafayate es pintoresco, con calles adoquinadas y plazas sombreadas. La Iglesia Nuestra
-                    Señora del Rosario es un punto de referencia histórico y cultural que refleja la herencia colonial
-                    de la región.
-
-                    El entorno natural que rodea Cafayate es impresionante. El Parque Nacional los Cardones ofrece
-                    senderos de trekking y miradores panorámicos, mientras que la Quebrada de las Conchas, con sus
-                    formaciones rocosas únicas, es un lugar perfecto para explorar en coche.
-
-                    La gastronomía de Cafayate es una deliciosa fusión de sabores regionales y platos tradicionales
-                    argentinos. Las empanadas y la carne a la parrilla son imperdibles, y los postres con dulce de leche
-                    son irresistibles.
-
-                    Cafayate es un destino que atrae a amantes del vino y a quienes buscan paisajes naturales
-                    impresionantes, creando una experiencia inolvidable en el noroeste de Argentina.
-                    </p>
-                </div>
-
-            </div>
+<!--<div class="galeria">
+    <div class="imagen">
+        <img src="./assets/images/depositphotos_139020872-stock-photo-road-leading-to-majestic-mount.jpg" alt="Imagen 1"
+            class="galeria-img">
+        <div class="nombre">FORMOSA</div>
+        <div class="descripcion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ea, est temporibus, vero quia voluptate accusantium quae natus praesentium quas aspernatur et magni officiis vitae illo accusamus excepturi cum id?
         </div>
     </div>
+    <div class="imagen">
+        <img src="./assets/images/depositphotos_139020872-stock-photo-road-leading-to-majestic-mount.jpg" alt="Imagen 1"
+            class="galeria-img">
+        <div class="nombre">Nombre de la Imagen 1</div>
+    </div>
+    <div class="imagen">
+        <img src="./assets/images/depositphotos_139020872-stock-photo-road-leading-to-majestic-mount.jpg" alt="Imagen 1"
+            class="galeria-img">
+        <div class="nombre">Nombre de la Imagen 1</div>
+    </div>
+    
+</div>-->
+
+<!-- EMPIEZA API INTEGRATION -->
+<div class="lista_ciudades">
+    <form method="" action="/send/" class="form_ciudades">
+        <p>Selecciona una Provincia y conocé su historia:</p>
+        <select id="miSelectMultiple" onchange="">
+            <option value="23512grupo27catamarca">catamarca </option>
+            <option value="23512grupo27chaco">chaco </option>
+            <option value="23512grupo27corrientes">Corrientes </option>
+            <option value="23512grupo27formosa">Formosa </option>
+            <option value="23512grupo27jujuy">Jujuy</option>
+            <option value="23512grupo27misiones">Misiones</option>
+            <option value="23512grupo27salta">Salta</option>
+            <option value="23512grupo27sgoestero">Sgo del Estero</option>
+            <option value="23512grupo27tucuman1">Tucumán</option>
+
+        </select>
+    </form>
+</div>
+<div class="contenido_paginas" style="display: flex;justify-content: space-evenly;">
+    <div id="fotos-container"></div>
+    <div class="informacion_ciudades">
+        <div class="container_texto" id="container_23512grupo27catamarca">
+            <h3>Catamarca, Argentina: Tesoros Naturales y Tradición Andina</h3>
+            <p class="texto__info" id="salta">
+                La provincia de Catamarca, en el noroeste de Argentina, es un destino que ofrece una combinación de
+                maravillas naturales y tradiciones culturales andinas. Conocida por sus paisajes montañosos, su folklore
+                y su rica herencia, Catamarca brinda a los visitantes una experiencia única en la región andina.
+
+                Los Valles Calchaquíes, una región escarpada y montañosa, son un destino destacado en Catamarca. Aquí,
+                los amantes de la naturaleza pueden explorar cañones, cascadas y formaciones rocosas únicas. El Parque
+                Nacional El Rey es una de las áreas protegidas de la provincia y ofrece oportunidades para hacer
+                senderismo y observar la vida silvestre.
+
+                La ciudad de San Fernando del Valle de Catamarca, la capital provincial, es un centro de cultura y
+                tradición. La Fiesta Nacional del Poncho, que celebra la herencia andina, es un evento destacado. La
+                música folclórica y las danzas tradicionales, como la chacarera y la cueca, son esenciales en la vida de
+                Catamarca.
+
+                La gastronomía en Catamarca combina platos regionales como la humita en chala, el locro y el cabrito al
+                horno. Además, la provincia es famosa por su producción de pisco, un aguardiente de uva.
+
+                Catamarca es un destino para quienes buscan explorar paisajes montañosos impresionantes y sumergirse en
+                las tradiciones culturales de la región andina, ofreciendo una experiencia única en el noroeste
+                argentino.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27chaco">
+            <h3>Chaco, Argentina: Naturaleza Exuberante y Cultura Indígena</h3>
+            <p class="texto__info">
+                La provincia de Chaco, en el norte de Argentina, es un destino que se destaca por su impresionante
+                belleza natural y su rica herencia cultural indígena. Conocida por su diversidad de ecosistemas, Chaco
+                ofrece a los visitantes una experiencia única que combina paisajes naturales con tradiciones autóctonas.
+
+                El Impenetrable, una vasta región de selva y bosque virgen, es uno de los principales atractivos
+                naturales de Chaco. Los amantes de la naturaleza pueden explorar senderos, avistar aves y descubrir una
+                variedad de especies de la flora y fauna en esta zona única.
+
+                La provincia también cuenta con una rica tradición cultural indígena, con comunidades qom, mocoví y
+                wichí que preservan sus lenguas, artesanías y ceremonias tradicionales. Los visitantes pueden aprender
+                sobre estas culturas y participar en actividades que promueven la interculturalidad.
+
+                La ciudad de Resistencia, la capital provincial, es un centro cultural con festivales de danza, música y
+                arte. El Museo de Medios de Comunicación Raúl Delfino, con su arquitectura única, es un punto de interés
+                en la ciudad.
+
+                La gastronomía en Chaco destaca por su variada oferta de platos regionales, como el asado, el locro y el
+                mbeyú, una especie de tortilla. Además, el vino de la región es apreciado por su calidad.
+
+                Chaco es un destino que atrae a quienes buscan explorar la naturaleza exuberante y aprender sobre las
+                tradiciones culturales de las comunidades indígenas en la región, brindando una experiencia única en el
+                norte de Argentina.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27corrientes">
+            <h3>Corrientes, Argentina: Naturaleza y Cultura en la Región de los Esteros</h3>
+            <p class="texto__info">
+                La provincia de Corrientes, en el noreste de Argentina, es un destino que combina una impresionante
+                naturaleza con una rica tradición cultural. Conocida como la "Tierra de los Esteros," Corrientes ofrece
+                una experiencia única en la región litoral del país.
+
+                El principal atractivo de Corrientes son los Esteros del Iberá, uno de los humedales más grandes del
+                mundo. Este ecosistema acuático alberga una variada vida silvestre, incluyendo caimanes, carpinchos, y
+                una gran cantidad de aves. Los visitantes pueden realizar safaris en bote y caminatas para explorar este
+                paraíso natural.
+
+                La ciudad de Corrientes, la capital provincial, ofrece una mezcla de arquitectura histórica y moderna.
+                La Catedral de Corrientes y el Puente General Belgrano son sitios emblemáticos. La costanera sobre el
+                río Paraná es un lugar perfecto para paseos y disfrutar del río.
+
+                La cultura correntina se destaca por su folclore y tradiciones. El chamamé, un género musical y de baile
+                típico de la región, es una parte esencial de la identidad local. Festivales folclóricos y carnavales
+                coloridos celebran esta herencia cultural.
+
+                La gastronomía en Corrientes incluye platos de pescado de río, como el dorado y el surubí, así como
+                comidas regionales como el asado a la estaca y la chipa, un panecillo de almidón de mandioca. La yerba
+                mate también es una parte fundamental de la cultura.
+
+                Corrientes es un destino que atrae a quienes buscan explorar la naturaleza y sumergirse en las ricas
+                tradiciones culturales del litoral argentino, brindando una experiencia en el corazón de los Esteros.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27formosa">
+            <h3>Formosa, Argentina: Naturaleza Virgen y Diversidad Cultural</h3>
+            <p class="texto__info">
+                La provincia de Formosa, ubicada en el norte de Argentina, es un destino que destaca por su asombrosa
+                belleza natural y su rica diversidad cultural. Conocida por sus extensas áreas de selva, ríos y
+                humedales, Formosa ofrece a los visitantes una experiencia única que combina la naturaleza virgen con
+                tradiciones culturales autóctonas.
+
+                El Parque Nacional Pilcomayo, con sus humedales y ecosistemas únicos, es uno de los principales
+                atractivos naturales de Formosa. Aquí, los amantes de la naturaleza pueden disfrutar de avistamiento de
+                aves, paseos en bote y caminatas por senderos rodeados de una flora y fauna sorprendente.
+
+                La provincia es hogar de diversas comunidades indígenas, como los wichí y los qom, que preservan sus
+                lenguas, artesanías y ceremonias tradicionales. Los visitantes pueden aprender sobre estas culturas y
+                participar en actividades que promueven el respeto por la diversidad.
+
+                La ciudad de Formosa, la capital provincial, es un punto de encuentro de culturas y etnias, con
+                festivales de danza, música y gastronomía que reflejan la diversidad de la región. El Museo Histórico
+                Regional Juan Pablo Duffard es un lugar interesante para conocer la historia local.
+
+                La gastronomía en Formosa incluye platos regionales, como el "chipá," una especie de panecillo de
+                almidón de mandioca, y el "puñete," una torta frita típica. Además, la provincia es conocida por sus
+                dulces, como la miel de abeja y los productos derivados de la caña de azúcar.
+
+                Formosa es un destino que atrae a quienes buscan explorar la naturaleza virgen y aprender sobre las
+                tradiciones culturales de las comunidades indígenas en la región, brindando una experiencia única en el
+                norte de Argentina.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27jujuy">
+            <h3>Jujuy, Argentina: Paisajes de Ensueño y Cultura Andina</h3>
+            <p class="texto__info">
+                La provincia de Jujuy, en el noroeste de Argentina, es un destino turístico que deslumbra con su
+                asombrosa belleza natural y su rica herencia cultural. Conocida como la "Tacita de Plata" por su encanto
+                colonial, Jujuy ofrece una experiencia única en el corazón de los Andes.
+
+                Los paisajes de Jujuy son variados y espectaculares. Desde las altas cumbres de la Quebrada de
+                Humahuaca, un sitio declarado Patrimonio de la Humanidad, hasta los verdes valles y las selvas de las
+                Yungas, la provincia es un paraíso para los amantes de la naturaleza. Además, las Salinas Grandes, un
+                vasto desierto de sal, asombran con su blancura resplandeciente.
+
+                La Quebrada de Humahuaca es un centro de la cultura andina, donde antiguas tradiciones se mezclan con la
+                vida moderna. Pueblos como Purmamarca y Tilcara ofrecen mercados artesanales y festivales folclóricos
+                que celebran la música y las danzas tradicionales.
+
+                La gastronomía jujeña combina ingredientes regionales como el maíz y el ají con influencias
+                prehispánicas. No te pierdas los tamales y las humitas, así como la infaltable empanada.
+
+                Jujuy es un destino que enamora a quienes buscan una experiencia auténtica, ya sea explorando paisajes
+                de ensueño o sumergiéndose en la rica herencia andina de la región.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27misiones">
+            <h3>Misiones, Argentina: Selvas, Ruinas y Cataratas Impresionantes</h3>
+            <p class="texto__info">
+                La provincia de Misiones, en el noreste de Argentina, es un destino que cautiva con sus selvas
+                exuberantes, su rica herencia histórica y sus asombrosas cataratas. Conocida por su biodiversidad y su
+                legado jesuítico, Misiones ofrece a los visitantes una experiencia única en la región del Litoral.
+
+                Las Cataratas del Iguazú, uno de los tesoros naturales más impresionantes del mundo, se encuentran en
+                Misiones. Este espectacular conjunto de cascadas en medio de la selva tropical es un Patrimonio de la
+                Humanidad de la UNESCO. Los visitantes pueden explorar pasarelas y embarcarse en safaris en bote para
+                apreciar su majestuosidad.
+
+                La provincia alberga las ruinas de las misiones jesuíticas, que datan del siglo XVII. Estos sitios
+                históricos, como San Ignacio Miní y Santa Ana, son testimonios del legado jesuítico en la región y
+                ofrecen una visión única de la historia colonial.
+
+                La ciudad de Posadas, la capital provincial, es un centro cultural y comercial con una ubicación
+                estratégica en la costa del río Paraná. La costanera, con sus paseos y áreas verdes, es un lugar ideal
+                para disfrutar de las vistas al río.
+
+                La gastronomía en Misiones destaca por su variedad de platos regionales, como el chipá, la sopa
+                paraguaya y la carne asada a la parrilla. Además, la provincia es conocida por su producción de yerba
+                mate.
+
+                Misiones es un destino que atrae a amantes de la naturaleza, entusiastas de la historia y viajeros que
+                buscan una experiencia única en el corazón del Litoral argentino.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27salta">
+            <h3>Salta, Argentina: Donde la Tradición y la Naturaleza se Abrazan</h3>
+            <p class="texto__info">
+                La provincia de Salta, ubicada en el noroeste de Argentina, es un destino turístico que combina la
+                belleza natural con una rica herencia cultural. Conocida como "La Linda" por su encanto, Salta ofrece
+                una experiencia única en cada rincón.
+
+                El paisaje montañoso de la provincia presenta una gran diversidad, desde las altas cumbres de los Andes
+                hasta las áridas llanuras de la Puna. En el corazón de la región, las montañas de los Valles Calchaquíes
+                albergan viñedos y pintorescos pueblos que muestran la influencia colonial española en su arquitectura y
+                gastronomía.
+
+                La ciudad de Salta, capital de la provincia, es un tesoro histórico con calles empedradas, edificios
+                coloniales y una vibrante vida cultural. El Tren a las Nubes, una de las rutas ferroviarias más altas
+                del mundo, permite explorar la región montañosa de una manera única.
+
+                La gastronomía salteña es una deliciosa fusión de sabores andinos y europeos, destacándose platos como
+                la empanada y el locro. Además, la música folclórica y las celebraciones tradicionales, como el Carnaval
+                de Tilcara, ofrecen un vistazo a la rica cultura local.
+
+                Salta es un destino versátil que cautiva a los amantes de la naturaleza, la historia y la cultura,
+                brindando una experiencia enriquecedora y auténtica en el norte argentino.
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27sgoestero">
+            <h3>Santiago del Estero, Argentina: Tradición Folclórica y Paisajes Rurales</h3>
+            <p class="texto__info">
+                La provincia de Santiago del Estero, en el norte de Argentina, es un destino que combina una rica
+                tradición folclórica con hermosos paisajes rurales. Conocida por su música, danza y costumbres
+                tradicionales, Santiago del Estero ofrece a los visitantes una experiencia única en el norte del país.
+
+                La ciudad de Santiago del Estero, la capital provincial, es un centro de cultura folclórica con una
+                fuerte identidad regional. La Fiesta Nacional del Sol y la Luna es un evento destacado que celebra la
+                música y la danza folclórica, como el zamba y el gato.
+
+                La provincia es hogar de diversas comunidades indígenas, como los tobas y los pilagás, que preservan sus
+                lenguas, artesanías y ceremonias tradicionales. Los visitantes pueden aprender sobre estas culturas y
+                participar en actividades que promueven el respeto por la diversidad.
+
+                Los paisajes rurales de Santiago del Estero son ideales para el turismo rural y ecoturismo. Las
+                estancias y fincas ofrecen a los visitantes la oportunidad de experimentar la vida en el campo y
+                disfrutar de actividades al aire libre como la equitación y la pesca.
+
+                La gastronomía en Santiago del Estero destaca por su énfasis en la carne asada, la empanada santiagueña
+                y el tamal, un platillo a base de maíz. La provincia también es conocida por su producción de vinos de
+                calidad.
+
+                Santiago del Estero es un destino para quienes buscan sumergirse en la tradición folclórica argentina y
+                explorar paisajes rurales pintorescos, brindando una experiencia auténtica en el norte del país.
 
 
 
-    <script>
-        var select = document.getElementById("miSelectMultiple");
-        var containers = document.querySelectorAll(".container_texto");
 
-        document.getElementById("container_salta capital").style.display = "block";
 
-        select.addEventListener("change", function () {
-            var selectedValue = select.value;
+            </p>
+        </div>
+        <div class="container_texto" id="container_23512grupo27tucuman1">
+            <h3>Tucumán, Argentina: Historia y Sabor en el Jardín de la República</h3>
+            <p class="texto__info">
+                La provincia de Tucumán, en el noroeste de Argentina, es un destino que combina una rica historia con
+                una deliciosa gastronomía. Conocida como el "Jardín de la República", Tucumán ofrece una experiencia
+                única que resalta la identidad cultural del país.
 
-            // Oculta todos los contenedores de texto
-            containers.forEach(function (container) {
-                container.style.display = 'none';
-            });
+                La ciudad de San Miguel de Tucumán, la capital provincial, es un punto de partida ideal para explorar la
+                región. El centro histórico alberga edificios coloniales y plazas encantadoras, con el histórico Casa
+                Histórica como un símbolo importante. Aquí, en 1816, se firmó la Declaración de la Independencia de
+                Argentina.
 
-            // Muestra el contenedor de texto correspondiente a la opción seleccionada
-            var containerToShow = document.getElementById("container_" + selectedValue);
-            if (containerToShow) {
-                containerToShow.style.display = 'block';
-            }
+                La provincia se caracteriza por sus plantaciones de caña de azúcar, lo que ha llevado a la producción de
+                uno de los endulzantes más emblemáticos del país, la "miel de caña". La gastronomía tucumana es
+                deliciosa y auténtica, con platos como la humita en chala y las empanadas salteñas, que se disfrutan en
+                todo el país.
+
+                Tucumán también es conocida por su belleza natural, con paisajes montañosos, cascadas y selvas
+                tropicales en la región de Tafí del Valle. El cerro San Javier ofrece panorámicas impresionantes de la
+                provincia.
+
+                Tucumán es un destino que combina la historia patriótica de Argentina con su herencia gastronómica,
+                ofreciendo a los visitantes una experiencia única en el norte del país.
+
+
+
+
+            </p>
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+<script>
+    var select = document.getElementById("miSelectMultiple");
+    var containers = document.querySelectorAll(".container_texto");
+
+    document.getElementById("container_23512grupo27catamarca").style.display = "block";
+
+    select.addEventListener("change", function () {
+        var selectedValue = select.value;
+
+        // Oculta todos los contenedores de texto
+        containers.forEach(function (container) {
+            container.style.display = 'none';
         });
 
+        // Muestra el contenedor de texto correspondiente a la opción seleccionada
+        var containerToShow = document.getElementById("container_" + selectedValue);
+        if (containerToShow) {
+            containerToShow.style.display = 'block';
+        }
+    });
 
-    </script>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="./js/photo_api.js"></script>
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="./js/photo_api.js"></script>
+<script src="./js/api.js"></script>
 
 
-
-    <footer class="pie">
-        <div id="socialmedia">
-            <ul class="group">
-                <li>
-                    <a href=""><img class="icon" id="media_icons" src="./assets/twitter.png"
-                            alt="icon for twitter" /></a>
-                </li>
-                <li>
-                    <a href=""><img class="icon" id="media_icons" src="./assets/facebook.png"
-                            alt="icon for facebook" /></a>
-                </li>
-                <li>
-                    <a href=""><img class="icon" id="media_icons" src="./assets/youtube.png"
-                            alt="icon for youtube" /></a>
-                </li>
-            </ul>
-            <p>(c) Realizado por grupo 27. Codo a Codo Comision 23512</p>
-        </div>
-    </footer>
-
+<footer class="footer">
+    <p> © Realizado por grupo 27. Codo a Codo Comisión 23512</p>
+    <div id="socialmedia">
+        <ul class="group">
+            <li>
+                <a href="https://twitter.com/"><img class="icon" id="media_icons" src="./assets/twitter.png"
+                        alt="icon for twitter" /></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/"><img class="icon" id="media_icons" src="./assets/facebook.png"
+                        alt="icon for facebook" /></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/"><img class="icon" id="media_icons" src="./assets/youtube.png"
+                        alt="icon for youtube" /></a>
+            </li>
+        </ul>
     </div>
-    <script src="./js/api.js"></script>
+</footer>
+
+</div>
 
 
 
-    </header>
+
+</header>
 
 </body>
 
