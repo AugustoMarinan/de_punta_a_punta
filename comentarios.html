@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comentarios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Listado de Productos</h1>
+    <h3>Codo a Codo 2023</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Alias</th>                
+                <th align="right">Procedencia</th>
+                <th>Destino</th>
+                <th align="right">Puntuacion</th>
+                <th>Comentario</th>
+            </tr>
+        </thead>
+        <tbody id="tabla_participantes"> </tbody>
+    </table>
+
+    
+
+    <script>
+        const URL = "http://127.0.0.1:5000/"
+        // Realizamos la solicitud GET al servidor para obtener todos los productos
+        fetch(URL + 'participantes')
+            .then(function (response) {
+                if (response.ok) {return response.json(); }
+            })
+            .then(function (data) {
+                let tabla_participantes = document.getElementById('tabla_participantes');
+
+                // Iteramos sobre los productos y agregamos filas a la tabla
+                for (let participante of data) {
+                    let fila = document.createElement('tr');
+                    fila.innerHTML = '<td>' + participante.codigo + '</td>' +
+                        '<td>' + participante.nombre + '</td>' +
+                        '<td align="right">' + participante.alias + '</td>' +
+                        '<td align="right">' + participante.residencia + '</td>' +                       
+                        '<td align="right">' + participante.destino + '</td>' + 
+                        '<td align="right">' + participante.puntuacion + '</td>' +
+                        '<td align="right">' + participante.comentario + '</td>';
+                    tabla_participantes.appendChild(fila);
+                }
+            })
+            .catch(function (error) {
+                // Código para manejar errores
+                alert('Error al obtener los productos.');
+            });
+    </script>
+</body>
+</html>

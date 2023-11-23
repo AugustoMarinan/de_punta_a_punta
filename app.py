@@ -3,8 +3,13 @@
 # Instalar con pip install mysql-connector-python
 import mysql.connector
 
+from flask import Flask, request,jsonify,render_template
+
+from flask_cors import CORS
 
 
+app= Flask(__name__)
+CORS(app)
 
 #--------------------------------------------------------------------
 class Foro:
@@ -46,12 +51,15 @@ class Foro:
         self.cursor = self.conn.cursor(dictionary=True)
         
     #----------------------------------------------------------------
-    def agregar_participante(self, codigo, nombre, alias, residencia, destino, puntuacion,comentario):
+    def agregar_participante(self, codigo,nombre, alias, residencia, destino, puntuacion,comentario):
         # Verificamos si ya existe un participante con el mismo código
         self.cursor.execute(f"SELECT * FROM participantes WHERE codigo = {codigo}")
-        participante_existe = self.cursor.fetchone()
-        if participante_existe:
+        participantes_existe = self.cursor.fetchone()
+        if participantes_existe:
             return False
+ 
+        
+       
 
         sql = "INSERT INTO participantes (codigo, nombre, alias, residencia, destino, puntuacion,comentario) VALUES (%s, %s, %s, %s, %s, %s,%s)"
         valores = (codigo, nombre, alias, residencia, destino, puntuacion,comentario)
@@ -79,6 +87,7 @@ class Foro:
         self.cursor.execute("SELECT * FROM participantes")
         participantes = self.cursor.fetchall()
         return participantes
+    
 
     #----------------------------------------------------------------
     def eliminar_participante(self, codigo):
@@ -96,7 +105,7 @@ class Foro:
             print(f"Código.....: {participante['codigo']}")
             print(f"Nombre: {participante['nombre']}")
             print(f"Alias...: {participante['alias']}")
-            print(f"Recidencia.....: {participante['recidencia']}")
+            print(f"Residencia.....: {participante['residencia']}")
             print(f"Destino.....: {participante['destino']}")
             print(f"Puntuacion..: {participante['puntuacion']}")
             print(f"Comentario..: {participante['comentario']}")
@@ -106,4 +115,34 @@ class Foro:
 
 participantes=Foro("127.0.0.1","root","","mi_app")
 
+#print(participantes.listar_participantes())
 
+
+@app.route("/participantes", methods=["GET"])
+def listar_participantes():
+    # Usar la instancia participantes para llamar al método listar_participantes
+    participantes_list = participantes.listar_participantes()
+    return jsonify(participantes_list)
+
+@app.route("/participantes", methods=["POST"])
+def agregar_comentario():
+    codigo=request.form['codigo']
+    nombre = request.form['nombre']
+    alias = request.form['alias']
+    residencia = request.form['residencia']
+    destino = request.form['destino']
+    puntuacion = request.form['puntuacion']
+    comentario = request.form['comentario']  
+    
+ 
+
+    if participantes.agregar_participante(codigo,nombre, alias, residencia, destino, puntuacion,comentario):
+        return jsonify({"mensaje": "Producto agregado"}), 201
+    else:
+        return jsonify({"mensaje": "Producto ya existe"}), 400
+
+
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
