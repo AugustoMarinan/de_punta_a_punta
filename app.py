@@ -37,7 +37,7 @@ class Foro:
 
         # Una vez que la base de datos está establecida, creamos la tabla si no existe
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS participantes (
-            codigo INT AUTO_INCREMENT PRIMARY KEY ,
+            codigo INT AUTO_INCREMENT PRIMARY KEY UNIQUE ,
             nombre VARCHAR(255) NOT NULL,
             alias VARCHAR(255) NOT NULL,
             residencia VARCHAR(255),
@@ -51,22 +51,19 @@ class Foro:
         self.cursor = self.conn.cursor(dictionary=True)
         
     #----------------------------------------------------------------
-    def agregar_participante(self, codigo,nombre, alias, residencia, destino, puntuacion,comentario):
-        # Verificamos si ya existe un participante con el mismo código
-        self.cursor.execute(f"SELECT * FROM participantes WHERE codigo = {codigo}")
-        participantes_existe = self.cursor.fetchone()
-        if participantes_existe:
+    def agregar_participante(self, nombre, alias, residencia, destino, puntuacion, comentario):
+        try:
+            sql = "INSERT INTO participantes (nombre, alias, residencia, destino, puntuacion, comentario) VALUES (%s, %s, %s, %s, %s, %s)"
+            valores = (nombre, alias, residencia, destino, puntuacion, comentario)
+
+            self.cursor.execute(sql, valores)
+            self.conn.commit()
+            return True  # Participante creado exitosamente
+
+        except mysql.connector.Error as error:
+            print(f"Error al agregar participante: {error}")
             return False
- 
-        
-       
 
-        sql = "INSERT INTO participantes (codigo, nombre, alias, residencia, destino, puntuacion,comentario) VALUES (%s, %s, %s, %s, %s, %s,%s)"
-        valores = (codigo, nombre, alias, residencia, destino, puntuacion,comentario)
-
-        self.cursor.execute(sql, valores)        
-        self.conn.commit()
-        return True
 
     #----------------------------------------------------------------
     def consultar_participante(self, codigo):
@@ -115,7 +112,8 @@ class Foro:
 
 participantes=Foro("127.0.0.1","root","","mi_app")
 
-#print(participantes.listar_participantes())
+#participantes.agregar_participante("Diego","Gallo","CABA","Esquel",5,"Maravilloso")
+
 
 
 @app.route("/participantes", methods=["GET"])
@@ -126,7 +124,7 @@ def listar_participantes():
 
 @app.route("/participantes", methods=["POST"])
 def agregar_comentario():
-    codigo=request.form['codigo']
+    
     nombre = request.form['nombre']
     alias = request.form['alias']
     residencia = request.form['residencia']
@@ -136,13 +134,15 @@ def agregar_comentario():
     
  
 
-    if participantes.agregar_participante(codigo,nombre, alias, residencia, destino, puntuacion,comentario):
-        return jsonify({"mensaje": "Producto agregado"}), 201
+    if participantes.agregar_participante(nombre, alias, residencia, destino, puntuacion,comentario):
+        return jsonify({"mensaje": "Comentario agregado"}),200
     else:
-        return jsonify({"mensaje": "Producto ya existe"}), 400
+        return jsonify({"mensaje": "Comentario ya existe"}),400
 
 
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+  
+  
