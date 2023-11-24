@@ -142,6 +142,17 @@ def agregar_comentario():
 
 
 
+
+@app.route("/participantes/<int:codigo>", methods=["DELETE"])
+def eliminar_participante(codigo):
+    if participantes.eliminar_participante(codigo):
+        return jsonify({"mensaje": f"Participante con código {codigo} eliminado"}), 200
+    else:
+        return jsonify({"mensaje": f"Error al eliminar el participante con código {codigo}"}), 400
+
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
   

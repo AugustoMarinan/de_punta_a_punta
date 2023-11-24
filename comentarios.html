@@ -5,57 +5,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>comentarios</title>
+    <title>Comentarios</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Listado de Productos</h1>
-    <h3>Codo a Codo 2023</h3>
+    <h1>Listado de comentarios</h1>
+
     <table>
         <thead>
             <tr>
                 <th>Código</th>
                 <th>Nombre</th>
-                <th>Alias</th>                
+                <th>Alias</th>
                 <th align="right">Procedencia</th>
                 <th>Destino</th>
-                <th align="right">Puntuacion</th>
+                <th align="right">Puntuación</th>
                 <th>Comentario</th>
+                <th>Acciones</th> <!-- Columna para botones de acciones -->
             </tr>
         </thead>
         <tbody id="tabla_participantes"> </tbody>
     </table>
 
-    
-
     <script>
-        const URL = "http://127.0.0.1:5000/"
-        // Realizamos la solicitud GET al servidor para obtener todos los productos
-        fetch(URL + 'participantes')
-            .then(function (response) {
-                if (response.ok) {return response.json(); }
-            })
-            .then(function (data) {
-                let tabla_participantes = document.getElementById('tabla_participantes');
+        const URL = "http://127.0.0.1:5000/";
 
-                // Iteramos sobre los productos y agregamos filas a la tabla
-                for (let participante of data) {
-                    let fila = document.createElement('tr');
-                    fila.innerHTML = '<td>' + participante.codigo + '</td>' +
-                        '<td>' + participante.nombre + '</td>' +
-                        '<td align="right">' + participante.alias + '</td>' +
-                        '<td align="right">' + participante.residencia + '</td>' +                       
-                        '<td align="right">' + participante.destino + '</td>' + 
-                        '<td align="right">' + participante.puntuacion + '</td>' +
-                        '<td align="right">' + participante.comentario + '</td>';
-                    tabla_participantes.appendChild(fila);
-                }
+        function obtenerComentarios() {
+            fetch(URL + 'participantes')
+                .then(function (response) {
+                    if (response.ok) { return response.json(); }
+                })
+                .then(actualizarTabla)
+                .catch(function (error) {
+                    alert('Error al obtener los comentarios.');
+                });
+        }
+
+        function actualizarTabla(data) {
+            let tablaParticipantes = document.getElementById('tabla_participantes');
+            tablaParticipantes.innerHTML = ''; // Limpiar la tabla antes de agregar los nuevos datos
+
+            for (let participante of data) {
+                let fila = document.createElement('tr');
+                fila.innerHTML = `
+                    <td>${participante.codigo}</td>
+                    <td>${participante.nombre}</td>
+                    <td>${participante.alias}</td>
+                    <td align="right">${participante.residencia}</td>
+                    <td>${participante.destino}</td>
+                    <td align="right">${participante.puntuacion}</td>
+                    <td>${participante.comentario}</td>
+                    <td>
+                        
+                        <button onclick="eliminar(${participante.codigo})">Eliminar</button>
+                    </td>`;
+                tablaParticipantes.appendChild(fila);
+            }
+        }
+
+        function eliminar(codigo) {
+            fetch(`${URL}participantes/${codigo}`, {
+                method: 'DELETE'
             })
-            .catch(function (error) {
-                // Código para manejar errores
-                alert('Error al obtener los productos.');
-            });
+                .then(function (response) {
+                    if (response.ok) {
+                        alert('registro Eliminado correctamente.');
+                        obtenerComentarios(); // Actualiza la tabla después de eliminar correctamente
+                    } else {
+                        console.log('No se pudo eliminar el comentario.');
+                    }
+                })
+                .catch(function (error) {
+                    console.error('Error al intentar eliminar el comentario:', error);
+                });
+        }
+
+        
+
+        // Inicializar obteniendo los comentarios
+        obtenerComentarios();
     </script>
 </body>
+
 </html>
