@@ -62,8 +62,13 @@
         </div>
     </form>
 
+    <h4>Volver a los comentarios</h4>
+    <a href="comentarios.html">Click</a>
+
     <script>
         const URL = "http://127.0.0.1:5000/"
+        const URL_remota = "https://fukushidoin84.pythonanywhere.com/"
+
 
         // Capturamos el evento de envío del formulario
         document.getElementById('formulario').addEventListener('submit', function (event) {
@@ -81,7 +86,7 @@
             // Mostrar los datos enviados al servidor
             console.log("Datos enviados al servidor:", Object.fromEntries(formData));
 
-            fetch(URL + 'participantes', {
+            fetch(URL_remota + 'participantes', {
                 method: 'POST',
                 body: formData // Aquí enviamos formData en lugar de JSON
 

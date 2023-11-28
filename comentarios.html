@@ -81,10 +81,12 @@
     
 
     <script>
-        const URL = "http://127.0.0.1:5000/";
+        URL = "http://127.0.0.1:5000/";
+        const URL_remota = "https://fukushidoin84.pythonanywhere.com/"
+
 
         function obtenerComentarios() {
-            fetch(URL + 'participantes')
+            fetch(URL_remota + 'participantes')
                 .then(function (response) {
                     if (response.ok) { return response.json(); }
                 })
