@@ -6,27 +6,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comentarios</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="./css/style.css" />   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   </head>
+<body class="bodyForo">
+    <div class="menuHorizontal">
+        <ul>
+            <ul>
+                <a href="comentarios.html">
+                    <li>Foro</li>
+                </a>
+    
+                <a href="formulario.html">
+                    <li>Contactanos</li>
+                </a>
+                <a href="sur.html">
+                    <li>Sur</li>
+                </a>
+                <a href="centro.html">
+                    <li>Centro</li>
+                </a>
+                <a href="norte.html">
+                    <li>Norte</li>
+                </a>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+            </ul>
+        </ul>
+    </div>
+    <div class="agregar_comentario">
+        <h4>Agregar un Comentario</h4>
+        <a href="altas.html">Agregar Comentario</a>
+    </div>
+    
 
-<body>
-    <h1>Listado de comentarios</h1>
-
-    <table>
+    <table class="table">
         <thead>
-            <tr>
-                <th>Código</th>
-                <th>Nombre</th>
-                <th>Alias</th>
-                <th align="right">Procedencia</th>
-                <th>Destino</th>
-                <th align="right">Puntuación</th>
-                <th>Comentario</th>
-                <th>Acciones</th> <!-- Columna para botones de acciones -->
+            <tr class="table-secondary" >
+                <th scope="col">Codigo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Alias</th>
+                <th scope="col">Procedencia</th>
+                <th scope="col">Destino</th>
+                <th scope="col">Puntuación</th>
+                <th scope="col">Comentario</th>
             </tr>
         </thead>
-        <tbody id="tabla_participantes"> </tbody>
+        <tbody id="tabla_participantes"> 
+        </tbody>
     </table>
+    <footer class="footer">
+        <p> © Realizado por grupo 27. Codo a Codo Comisión 23512</p>
+        <div id="socialmedia">
+            <ul class="group">
+                <li>
+                    <a href="https://twitter.com/"><img class="icon" id="media_icons" src="./assets/twitter.png"
+                            alt="icon for twitter" /></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/"><img class="icon" id="media_icons" src="./assets/facebook.png"
+                            alt="icon for facebook" /></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/"><img class="icon" id="media_icons" src="./assets/youtube.png"
+                            alt="icon for youtube" /></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    
 
     <script>
         const URL = "http://127.0.0.1:5000/";
@@ -52,9 +104,9 @@
                     <td>${participante.codigo}</td>
                     <td>${participante.nombre}</td>
                     <td>${participante.alias}</td>
-                    <td align="right">${participante.residencia}</td>
+                    <td>${participante.residencia}</td>
                     <td>${participante.destino}</td>
-                    <td align="right">${participante.puntuacion}</td>
+                    <td>${participante.puntuacion}</td>
                     <td>${participante.comentario}</td>
                     <td>
                         
@@ -86,6 +138,8 @@
         // Inicializar obteniendo los comentarios
         obtenerComentarios();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 
 </html>
