@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <title>Foro alta</title>
+</head>
+
+<body>
+    <form class="row g-3 needs-validation" id="formulario" novalidate>
+        <div class="col-md-4">
+            <label for="nombre_form" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre_form" value="" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+
+        </div>
+        <div class="col-md-4">
+            <label for="alias_form" class="form-label">Alias</label>
+            <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" class="form-control" id="alias_form" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label for="residencia_form" class="form-label">Residencia</label>
+            <input type="text" class="form-control" id="residencia_form" required>
+            <div class="invalid-feedback">
+                Please provide a valid city.
+            </div>
+        </div>
+        <div class="col-md-5">
+            <label for="destino_form" class="form-label">Destino</label>
+            <input type="text" class="form-control" id="destino_form" required>
+            <div class="invalid-feedback">
+                Please provide a valid city.
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label for="puntaje_form" class="form-label">Estrellas</label>
+            <input type="range" class="form-range" min="1" max="5" step="1" id="puntaje_form">
+        </div>
+
+        <div class="mb-2">
+            <label for="comentario_form" class="form-label">Experiencia</label>
+            <textarea class="form-control" id="comentario_form" rows="3"></textarea>
+        </div>
+
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+        </div>
+    </form>
+
+    <h4>Volver a los comentarios</h4>
+    <a href="comentarios.html">Click</a>
+
+    <script>
+        const URL = "http://127.0.0.1:5000/"
+        const URL_remota = "https://fukushidoin84.pythonanywhere.com/"
+
+
+        // Capturamos el evento de envío del formulario
+        document.getElementById('formulario').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evitamos que se envie el form 
+
+            var formData = new FormData();
+
+            formData.append('nombre', document.getElementById('nombre_form').value);
+            formData.append('alias', document.getElementById('alias_form').value);
+            formData.append('residencia', document.getElementById('residencia_form').value);
+            formData.append('destino', document.getElementById('destino_form').value);
+            formData.append('puntuacion', document.getElementById('puntaje_form').value);
+            formData.append('comentario', document.getElementById('comentario_form').value);
+
+            // Mostrar los datos enviados al servidor
+            console.log("Datos enviados al servidor:", Object.fromEntries(formData));
+
+            fetch(URL_remota + 'participantes', {
+                method: 'POST',
+                body: formData // Aquí enviamos formData en lugar de JSON
+
+
+            })
+                .then(function (response) {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error('Error en la solicitud: ' + response.status);
+                    }
+
+                })
+                .then(function (data) {
+                    // Mostrar la respuesta del servidor
+                    console.log("Respuesta del servidor:", data);
+
+                    alert('reseña agregada correctamente.');
+                    // Limpiar el formulario para el proximo producto
+
+                    document.getElementById('nombre_form').value = "";
+                    document.getElementById('alias_form').value = "";
+                    document.getElementById('residencia_form').value = "";
+                    document.getElementById('destino_form').value = "";
+                    document.getElementById('comentario_form').value = "";
+                })
+                .catch(function (error) {
+                    // Mostramos el error, y no limpiamos el form.
+                    console.error('Hubo un problema con la solicitud Fetch:', error);
+                    alert('Error al agregar el comentario.');
+                });
+
+        })
+    </script>
+
+</body>
+
+</html>

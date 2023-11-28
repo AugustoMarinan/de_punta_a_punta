@@ -258,6 +258,7 @@ h2 {
   
 }
 
+
 .descripcion {
     position: absolute;
     bottom: 0;
@@ -284,6 +285,25 @@ h2 {
 .imagen:hover .descripcion {
     opacity: 1;
    
+}
+.bodyForo{
+    display: flexbox;
+    background-color: #7dd3fc;
+    
+}
+.bodyForo .menuHorizontal{
+    position: relative;
+    justify-content: flex-end;
+   
+}
+table .table{
+    margin-top: 10%;
+}
+.agregar_comentario{
+   
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 
