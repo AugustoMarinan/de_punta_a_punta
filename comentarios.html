@@ -119,7 +119,7 @@
         }
 
         function eliminar(codigo) {
-            fetch(`${URL}participantes/${codigo}`, {
+            fetch(`${URL_remota}participantes/${codigo}`, {
                 method: 'DELETE'
             })
                 .then(function (response) {
