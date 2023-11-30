@@ -5,7 +5,7 @@
 
 body {
     background-color: #7dd3fc;
-  
+
 }
 
 h1 {
@@ -294,17 +294,17 @@ h2 {
 .bodyForo .menuHorizontal{
     position: relative;
     justify-content: flex-end;
-   
 }
+
 table .table{
     margin-top: 10%;
 }
-.agregar_comentario{
+/* .agregar_comentario{
    
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
-}
+} */
 
 
 @media screen and (max-width:800px){
@@ -372,4 +372,157 @@ table .table{
         margin-bottom: 20px;
     }
 
-}   
+}  
+
+
+/* ------------------------------------------------- */
+/* ----------------       FORO      ---------------- */
+/* ------------------------------------------------- */
+
+.titulo_comentario h2{
+    font-size: 70px;
+    color: #fff;
+}
+
+.agregar_comentario {
+    text-align: start;
+    margin: 50px 0 40px;
+}
+
+.agregar_comentario a{
+    border-radius: 8px;
+    background-color: #0284c7;
+    text-decoration: none;
+    border: solid 2px  #056291;
+    padding: 8px 20px;
+}
+
+.agregar_comentario a:hover {
+    background-color: #056291;
+}
+
+/* ........  tabla  ........... */
+.tabla {
+    margin: 5px 20px 50px;
+    max-width: 1000px;
+    text-align: center;
+}
+
+
+.boton {
+    height: 26px;
+}
+
+.columna_comentario {
+    min-width: 180px;
+}
+
+/* ........  footer  ........... */
+#footer_comentario{
+    height: 115px;
+    width: 100%;
+    padding: 0;
+}
+#footer_comentario p{
+    margin: 0 auto 12px;
+    font-size: 17px;
+}
+#footer_comentario .group{
+    margin: 0 10px 15px 0;
+    padding: 0;
+}
+
+/* ........  mediaqueries  ........... */
+@media (max-width:630px) {
+    #footer_comentario {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0 5px;
+    }
+
+    #footer_comentario p{
+        font-size: 15px;
+    }
+    #footer_comentario #media_icons{
+        height: 35px;
+        width: 35px;
+    }
+
+    .tabla {
+        overflow-x: scroll;
+    }
+
+    .tabla::-webkit-scrollbar{
+        border: 2px solid #b4afafb9;
+        background-color: #e5e2e2d2;
+        border-radius: 5px;
+    }
+    .tabla::-webkit-scrollbar-thumb{ 
+        border-radius: 5px;
+        border-bottom: 2px solid #b4afafb9;
+        border-top: 2px solid #b4afafb9;
+        background-color: #0284c7;
+    }
+
+}
+
+@media (max-width:770px) {
+    .tabla {
+        overflow-x: scroll;
+    }
+    
+    .tabla::-webkit-scrollbar{
+        border: 2px solid #b4afafb9;
+        background-color: #ffffffe3;
+        border-radius: 5px;
+    }
+    .tabla::-webkit-scrollbar-thumb{ 
+        border-radius: 5px;
+        border-bottom: 2px solid #b4afafb9;
+        border-top: 2px solid #b4afafb9;
+        background-color: #0284c7;
+    }
+
+}
+
+@media (max-width:800px) {
+    #footer_comentario #media_icons{
+        height: 40px;
+        width: 40px;
+    }
+    .tabla {
+        margin-bottom: 66px;
+
+    }
+}
+
+@media (min-width:801px) {
+    .bodyForo {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Esto asegura que el contenedor ocupe al menos el 100% del alto de la ventana */
+        margin: 0;
+    }
+    .titulo_comentario h2{
+        padding-top: 50px; 
+    }
+
+    .tabla {
+        width: 100%;
+        margin: 0 auto 50px;
+        padding: 0 20px 0;
+    }
+
+    #footer_comentario {
+        margin-top: auto;
+    }
+
+    #footer_comentario #media_icons{
+        height: 45px;
+        width: 45px;
+    }
+
+    #footer_comentario p{
+        font-size: 20px;
+    }
+}
