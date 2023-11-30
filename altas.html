@@ -10,10 +10,11 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <title>Foro alta</title>
+    <link rel="stylesheet" href="./css/altas_style.css">
 </head>
 
-<body>
-    <form class="row g-3 needs-validation" id="formulario" novalidate>
+<body class="m-5">
+    <form class="row g-3 needs-validation m-auto" id="formulario" novalidate>
         <div class="col-md-4">
             <label for="nombre_form" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="nombre_form" value="" required>
@@ -22,7 +23,6 @@
             </div>
         </div>
 
-        </div>
         <div class="col-md-4">
             <label for="alias_form" class="form-label">Alias</label>
             <div class="input-group has-validation">
@@ -57,17 +57,19 @@
             <textarea class="form-control" id="comentario_form" rows="3"></textarea>
         </div>
 
-        <div class="col-12">
-            <button class="btn btn-primary" type="submit">Enviar</button>
+        <div class="col-12 text-center">
+            <button class="btn btn-primary px-5" type="submit">Enviar</button>
         </div>
     </form>
 
-    <h4>Volver a los comentarios</h4>
-    <a href="comentarios.html">Click</a>
-
+    <div class="text-center mt-3 volver">
+        <a href="comentarios.html" class="text-decoration-none alert-heading"><span class="fs-3">&laquo;</span> Volver a los comentarios</a>
+    </div>
+    
     <script>
         const URL = "http://127.0.0.1:5000/"
         const URL_remota = "https://fukushidoin84.pythonanywhere.com/"
+
 
 
         // Capturamos el evento de envío del formulario
@@ -86,7 +88,7 @@
             // Mostrar los datos enviados al servidor
             console.log("Datos enviados al servidor:", Object.fromEntries(formData));
 
-            fetch(URL_remota + 'participantes', {
+            fetch(URL + 'participantes', {
                 method: 'POST',
                 body: formData // Aquí enviamos formData en lugar de JSON
 

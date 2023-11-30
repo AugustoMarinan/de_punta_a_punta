@@ -1,0 +1,19 @@
+body{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,70,121,0.6895133053221288) 25%, rgba(0,212,255,1) 100%);
+}
+
+form {
+    background-color: #f9f9f98a;
+    padding: 25px 30px;
+    border-radius: 10px;
+    max-width: 860px;
+    border: 2px solid #f9f9f9e8;
+}
+
+
+.volver {
+    color: #f9f9f9;
+    text-align: center;
+    font-size: 18px;
+}
+
