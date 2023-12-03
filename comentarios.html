@@ -95,7 +95,7 @@
 
 
         function obtenerComentarios() {
-            fetch(URL + 'participantes')
+            fetch(URL_remota + 'participantes')
                 .then(function (response) {
                     if (response.ok) { return response.json(); }
                 })
@@ -130,7 +130,7 @@
         }
 
         function eliminar(codigo) {
-            fetch(`${URL}participantes/${codigo}`, {
+            fetch(`${URL_remota}participantes/${codigo}`, {
                 method: 'DELETE'
             })
                 .then(function (response) {
