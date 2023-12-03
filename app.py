@@ -110,7 +110,8 @@ class Foro:
         else:
             print("participante no encontrado.")
 
-participantes=Foro("127.0.0.1","root","","mi_app")
+#participantes=Foro("127.0.0.1","root","","mi_app")
+participantes=Foro("address:fukushidoin84.mysql.pythonanywhere-services.com","fukushidoin84","ClaveSecreta123","fukushidoin84$miapp")
 
 #participantes.agregar_participante("Diego","Gallo","CABA","Esquel",5,"Maravilloso")
 
