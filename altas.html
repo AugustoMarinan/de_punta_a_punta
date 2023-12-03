@@ -88,7 +88,7 @@
             // Mostrar los datos enviados al servidor
             console.log("Datos enviados al servidor:", Object.fromEntries(formData));
 
-            fetch(URL + 'participantes', {
+            fetch(URL_remota + 'participantes', {
                 method: 'POST',
                 body: formData // Aquí enviamos formData en lugar de JSON
 
